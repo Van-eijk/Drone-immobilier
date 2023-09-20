@@ -1,0 +1,80 @@
+header{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-logo{
+    height: 50px;
+    width: 100px;
+}
+
+.main-logo img{
+    height: 50px;
+    width: 300px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7{
+    border: 1px solid black;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    cursor: pointer;
+    /*display: flex;
+    align-items: center;*/
+    /*height: 300px;*/
+}
+ .menu1{
+   /*display: flex;
+    flex-direction: column;*/
+    border: 5px solid red;
+}
+
+.menu1 p,.menu2 p,.menu3 p,.menu4 p,.menu5 p,.menu6 p,.menu7 p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu11{
+    display: flex;
+    align-items: center;
+}
+
+.sous-menu1{
+    border: 1px solid blue;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin: 10px 0px 0px 0px ;
+    /*padding: 5px 0px;*/
+    border-radius: 3px;
+    background-color: yellow;
+    box-shadow: 5px 5px 5px black;
+}
+.sous-menu1 a{
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding: 0px 10px;
+    /*height: 30px;*/
+    vertical-align: baseline;
+}
+
+.sous-menu1 a:hover{
+    background-color: blue;
+}
+
+.user{
+    display: flex;
+}
+
+.icon-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
