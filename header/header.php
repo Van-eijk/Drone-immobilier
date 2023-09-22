@@ -15,45 +15,30 @@
         </div>
 
         <div class="menu">
-            <div class="menu1" id="menuUn"  onmousedown="afficherSousMenu1()" >
-                <div class="menu11" id="idServiceImmobilier" onmouseover="afficherSousMenu1()" >
-                    <p>Services immobiliers</p>
-                    <span> <i class="fa-solid fa-caret-down"></i></span>
-                </div>
+            <ul class="menuderoulant">
+                <li> 
+                    <a href="#" id="serviceImmo">Services immobilier
+                        <i class="fa-solid fa-caret-down"></i>  
+                    </a>
+                    
 
-                <div class="sous-menu1" id="sousMenu1" onmouseleave="masquerSousMenu1()">
-                    <a href="">Location</a>
-                    <a href="">Vente</a>
-                    <a href="">Gestion immobilière</a>
-                </div>
-            </div>
+                    <ul class="sousmenu" >
+                        <li><a href="">Location</a></li>
+                        <li><a href="">Vente</a></li>
+                        <li><a href="">Gestion immobilière</a></li>
+                    </ul>
+                </li>
 
-            <div class="menu2">
-                <p>Construction & prestation</p>
-                <span></span>
-            </div>
+                <li><a href="#">Construction & prestation</a></li>
+                <li><a href="">Recrutement étranger et tourisme</a></li>
+                <li><a href="">Guide Besoin</a></li>
+                <li><a href="">Commerce generale</a></li>
+                <li><a href="">A propos de nous</a></li>
+                
+            </ul>
 
-            <div class="menu3">
-                <p>Recrutement étranger & Tourisme</p>
-                <span></span>
-            </div>
 
-            <div class="menu4">
-                <p>Guide besoin</p>
-                <span></span>
-            </div>
-
-            <div class="menu5">
-                <p>Commerce général</p>
-                <span></span>
-            </div>
-
-            <div class="menu6">
-                <p>A propos de nous</p>
-                <span></span>
-            </div>
-
-            <div class="menu7">
+            <div class="whatsapp">
                 <span><i class="fa-brands fa-whatsapp"></i></span>
             </div>
             <div class="user">

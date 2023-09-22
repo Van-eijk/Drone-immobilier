@@ -1,7 +1,7 @@
 <?php 
     // On définit le lien du logo pour cette page
 
-    $lienLogo ="Images/logo.jpg" ;
+    $lienLogo ="Images/logo2.png" ;
 ?>
 
 
