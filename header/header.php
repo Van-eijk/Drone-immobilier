@@ -23,9 +23,9 @@
                     
 
                     <ul class="sousmenu" >
-                        <li><a href="">Location</a></li>
+                        <li><a href="" style="border-top-left-radius: 5px; border-top-right-radius: 5px; " >Location</a></li>
                         <li><a href="">Vente</a></li>
-                        <li><a href="">Gestion immobilière</a></li>
+                        <li><a href="" style="border-radius: 5px;" >Gestion immobilière</a></li>
                     </ul>
                 </li>
 

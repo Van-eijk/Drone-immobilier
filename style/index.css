@@ -1,16 +1,86 @@
 html{
-    height: 99%;
-    width: 99%;
+    --whiteColor: #ffffff;
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+}
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
 
 body{
     height: 99%;
-    width: 99%;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
+    width: 100%;
+    
 }
 
-/*header{
+.backgroung-presentation{
+    height: 550px;
+    width: 100%;
+    /*border: 5px solid black;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../images/etudiant.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 560px;
+    background-attachment: fixed;
+}
+
+.search-box{
+    background-color: var(--whiteColor);
+    width: 50%;
+    height: 30%;
+    border-radius: 30px;
+    opacity: 0.9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-box form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     border: 2px solid black;
-}*/
+    width: 100%;
+    height: 50%;
+}
+
+.search-box form select{
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid var(--headerColorText);
+    background-color: var(--whiteColor);
+    opacity: 1;
+    padding: 10px 20px 10px 20px;
+    /*margin: 8px 8px;*/
+}
+
+.search-box form button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--headerMainColor);
+    border: none;
+    cursor: pointer;
+}
+
+.search-box form button i{
+    font-size: 21px;
+    color: var(--whiteColor);
+    font-weight: bolder;
+}
+
+p{
+    /*font-size: xx-large;*/
+    color: blue;
+}

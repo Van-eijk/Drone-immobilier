@@ -1,20 +1,34 @@
 html{
     --headerColorText:#0102fd ;
     --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+}
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
 
 
 
 header{
+    box-sizing: border-box;
     /*border: 2px solid black;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    background-color: transparent;
-    opacity: 0.8;
+    width: 100%;
+    padding-right: 10px;
+    background-color: var(--whiteColor);
+    opacity: 0.9;
     color: var(--headerColorText);
     font-weight: bolder;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+   
 }
 
 .main-logo{
@@ -87,6 +101,7 @@ header{
     position: absolute;
     background-color: #ffffff;
     box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
     width: 200px;
     /*opacity: 0.5;*/
 }
@@ -121,6 +136,7 @@ header{
 .menuderoulant .sousmenu li a:hover{
     background-color: #ffffff;
     opacity: 1;
+    /*border-radius: 5px;*/
 
 }
 
