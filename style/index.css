@@ -72,6 +72,17 @@ body{
 
 }
 
+.location:hover i{
+    opacity: 0.5;
+    /*color: red;*/
+}
+
+.vente:hover i{
+    opacity: 0.5;
+    /*color: green;*/
+}
+
+
 .location p, .vente p{
     color: var(--headerColorText);
     margin-top: 5px;

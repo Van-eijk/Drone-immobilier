@@ -18,7 +18,6 @@ function checkRadioInputSearch() {
     if (radioLouer.checked) {
         locationIcon.style.backgroundColor = "var(--headerMainColor)";
         locationTitle.style.color = "var(--headerMainColor)";
-        //alert("location");
     } else {
         locationIcon.style.backgroundColor = "var(--headerColorText)";
         locationTitle.style.color = "var(--headerColorText)";
@@ -27,7 +26,6 @@ function checkRadioInputSearch() {
     if (radioVendre.checked) {
         venteIcon.style.backgroundColor = "var(--headerMainColor)";
         venteTitle.style.color = "var(--headerMainColor)";
-        //alert("vente");
 
     }
     else {
@@ -45,47 +43,62 @@ setInterval(checkRadioInputSearch, 0.1); // Execution de ladite fonction
 
 
 
-
-
-
+// Nous allons maintenant changer les iconnes au passage de la souris
 
 
 // fonctions pour changer l'icon de la location au passage de la souris
 
 
 
-/* function locationOver() {
-    locationIcon.style.backgroundColor = "var(--headerMainColor)";
-    locationTitle.style.color = "var(--headerMainColor)";
+/*
+    function locationOver() {
 
-}
+        if (radioLouer.checked == false) {
+            locationIcon.style.backgroundColor = "var(--headerMainColor)";
+            locationTitle.style.color = "var(--headerMainColor)";
+        }
 
-function locationLeave() {
-    locationIcon.style.backgroundColor = "var(--headerColorText)";
-    locationTitle.style.color = "var(--headerColorText)";
+    }
 
-}
+    function locationLeave() {
+        if (radioLouer.checked == false) {
+            locationIcon.style.backgroundColor = "var(--headerColorText)";
+            locationTitle.style.color = "var(--headerColorText)";
+        }
 
-
-
-// fonctions pour changer l'icon de la vente au passage de la souris
-
-
-
-
+    }
 
 
 
-function venteOver() {
-    venteIcon.style.backgroundColor = "var(--headerMainColor)";
-    venteTitle.style.color = "var(--headerMainColor)";
+    // fonctions pour changer l'icon de la vente au passage de la souris
 
-}
 
-function venteLeave() {
-    venteIcon.style.backgroundColor = "var(--headerColorText)";
-    venteTitle.style.color = "var(--headerColorText)";
 
-}
+
+
+
+
+    function venteOver() {
+
+        if (radioVendre.checked == false) {
+            venteIcon.style.backgroundColor = "var(--headerMainColor)";
+            venteTitle.style.color = "var(--headerMainColor)";
+
+        }
+
+
+    }
+
+    function venteLeave() {
+
+        if (radioVendre.checked == false) {
+            venteIcon.style.backgroundColor = "var(--headerColorText)";
+            venteTitle.style.color = "var(--headerColorText)";
+
+        }
+
+    }
+
 
 */
+

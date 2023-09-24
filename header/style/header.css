@@ -134,7 +134,7 @@ header{
 }
 
 .menuderoulant .sousmenu li a:hover{
-    background-color: #ffffff;
+    background-color: var(--whiteColor);
     opacity: 1;
     /*border-radius: 5px;*/
 
