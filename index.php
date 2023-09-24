@@ -28,9 +28,27 @@
     <div class="backgroung-presentation">
         <div class="search-box">
             <form action="" method="POST">
-                
-                <div class="search-pays">
-                    <select name="searchPays" id="">
+
+                <div class="location-vente">
+                    <div class="location" onmouseover="locationOver()" onmouseleave="locationLeave()" >
+                        <div class="location-icon" id="locationIcon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <p id="locationTitle" >Louer</p>
+                    </div>
+
+                    <div class="vente" onmouseover="venteOver()" onmouseleave="venteLeave()" >
+                        <div class="vente-icon" id="venteIcon" >
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <p id="venteTitle" >Acheter</p>
+                    </div>
+
+                </div>
+
+                <div class="search-option">
+                    <div class="search-pays">
+                        <select name="searchPays" id="">
                             <option value="Cameroun" selected = "selected" >Cameroun</option>
                             <option value="Canada">Canada</option>
                             <option value="Afrique du Sud">Afrique du Sud</option>
@@ -38,35 +56,36 @@
                             <option value="Belgique">Belgique</option>
 
                         </select>
-                </div>
+                    </div>
 
 
-                <div class="search-ville">
-                    <select name="searchVille" id="">
-                        <option value="Yaounde" selected = "selected" >Yaounde</option>
-                        <option value="Montreal">Montreal</option>
-                        <option value="Douala">Douala</option>
-                        <option value="Habidjan">Habidjan</option>
-                        <option value="Paris">Paris</option>
+                    <div class="search-ville">
+                        <select name="searchVille" id="">
+                            <option value="Yaounde" selected = "selected" >Yaounde</option>
+                            <option value="Montreal">Montreal</option>
+                            <option value="Douala">Douala</option>
+                            <option value="Habidjan">Habidjan</option>
+                            <option value="Paris">Paris</option>
 
-                    </select>
-                </div>
+                        </select>
+                    </div>
 
 
-                <div class="search-bien">
-                    <select name="searchTypeBien" id="">
-                        <option value="Studio" selected = "selected" >Studio</option>
-                        <option value="Chambre">Chambre</option>
-                        <option value="Appartement">Appartement</option>
-                        <option value="Maison">Maison</option>
-                        <option value="Terrain">Terrain</option>
+                    <div class="search-bien">
+                        <select name="searchTypeBien" id="">
+                            <option value="Studio" selected = "selected" >Studio</option>
+                            <option value="Chambre">Chambre</option>
+                            <option value="Appartement">Appartement</option>
+                            <option value="Maison">Maison</option>
+                            <option value="Terrain">Terrain</option>
 
-                    </select>
-                </div>
+                        </select>
+                    </div>
 
-                <div class="search-send">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass fa-beat-fade"></i></button>
+                    <div class="search-send">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass fa-beat-fade"></i></button>
 
+                    </div>
                 </div>
 
             </form>
@@ -100,6 +119,6 @@
 
 
 
-    
+    <script src="js/effetLocationVente.js"></script>
 </body>
 </html>
