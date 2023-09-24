@@ -30,19 +30,28 @@
             <form action="" method="POST">
 
                 <div class="location-vente">
-                    <div class="location" onmouseover="locationOver()" onmouseleave="locationLeave()" >
+
+
+                    <div class="btn-radio">
+                        <input type="radio" name="locationVente" value="Alouer" id="btnLouer" checked="checked" >
+                        <input type="radio" name="locationVente" value="Avendre" id="btnVendre">
+                    </div>
+
+
+
+                    <label class="location" onmouseover="locationOver()" onmouseleave="locationLeave()" for= "btnLouer" >
                         <div class="location-icon" id="locationIcon">
                             <i class="fa-solid fa-key"></i>
                         </div>
                         <p id="locationTitle" >Louer</p>
-                    </div>
+                    </label>
 
-                    <div class="vente" onmouseover="venteOver()" onmouseleave="venteLeave()" >
+                    <label class="vente" onmouseover="venteOver()" onmouseleave="venteLeave()" for="btnVendre" >
                         <div class="vente-icon" id="venteIcon" >
                             <i class="fa-solid fa-house-chimney"></i>
                         </div>
                         <p id="venteTitle" >Acheter</p>
-                    </div>
+                    </label>
 
                 </div>
 
