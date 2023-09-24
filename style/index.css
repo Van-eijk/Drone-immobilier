@@ -39,7 +39,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid blueviolet;
+    /*border: 2px solid blueviolet;*/
     padding: 10px;
 
 }
@@ -49,7 +49,7 @@ body{
     flex-direction: column;
     /*align-items: center;*/
     justify-content: space-around;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     width: 100%;
     height: 100%;
 }
@@ -58,18 +58,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
 }
 
 
 .location-vente .location, .location-vente .vente{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
 
+}
+
+.btn-radio{
+    display: none;
 }
 
 .location:hover i{
@@ -113,7 +117,7 @@ body{
 }
 
 .search-pays, .search-ville, .search-bien, .search-send{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     margin: 0px 5px 0px 5px;
 }
 .search-box form select{

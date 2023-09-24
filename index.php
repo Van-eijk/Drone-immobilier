@@ -2,6 +2,8 @@
     // On définit le lien du logo pour cette page
 
     $lienLogo ="Images/logo2.png" ;
+
+    echo $_POST["locationVente"];
 ?>
 
 
