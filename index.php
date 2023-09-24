@@ -3,7 +3,7 @@
 
     $lienLogo ="Images/logo2.png" ;
 
-    echo $_POST["locationVente"];
+    /*echo $_POST["locationVente"];*/
 ?>
 
 
@@ -103,6 +103,16 @@
 
         </div>
 
+    </div>
+
+    <div class="second-part">
+        <div class="bloc-gauche"></div>
+        <h2>NOS SERVICES</h2>
+        <div class="bloc-droit"></div>
+    </div>
+
+    <div class="services-slide">
+        
     </div>
 
     <p>massa</p>
