@@ -61,6 +61,7 @@ body{
     border: 3px solid yellow;
 }
 
+
 .location-vente .location, .location-vente .vente{
     border: 2px solid black;
     display: flex;

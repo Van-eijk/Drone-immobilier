@@ -33,20 +33,20 @@
 
 
                     <div class="btn-radio">
-                        <input type="radio" name="locationVente" value="Alouer" id="btnLouer" checked="checked" >
-                        <input type="radio" name="locationVente" value="Avendre" id="btnVendre">
+                        <input type="radio" class="btn-louer-vente" name="locationVente" value="Alouer" id="radioLouer" checked="checked"  >
+                        <input type="radio" class="btn-louer-vente" name="locationVente" value="Avendre" id="radioVendre">
                     </div>
 
 
 
-                    <label class="location" onmouseover="locationOver()" onmouseleave="locationLeave()" for= "btnLouer" >
+                    <label class="location" onmouseover="locationOver()" onmouseleave="locationLeave()" for= "radioLouer" >
                         <div class="location-icon" id="locationIcon">
                             <i class="fa-solid fa-key"></i>
                         </div>
                         <p id="locationTitle" >Louer</p>
                     </label>
 
-                    <label class="vente" onmouseover="venteOver()" onmouseleave="venteLeave()" for="btnVendre" >
+                    <label class="vente" onmouseover="venteOver()" onmouseleave="venteLeave()" for="radioVendre" >
                         <div class="vente-icon" id="venteIcon" >
                             <i class="fa-solid fa-house-chimney"></i>
                         </div>
