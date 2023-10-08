@@ -107,11 +107,38 @@
 
     <div class="second-part">
         <div class="bloc-gauche"></div>
-        <h2>NOS SERVICES</h2>
+        <h2>NOS DOMAINES D'EXPERTISES</h2>
         <div class="bloc-droit"></div>
     </div>
 
     <div class="services-slide">
+        <img src="images/slider/bureau.jpg" alt="" class="serviceslide active">
+        <img src="images/slider/maison.jpg" alt="" class="serviceslide ">
+        <img src="images/slider/maison2.jpg" alt=""class="serviceslide ">
+        <img src="images/slider/salon.jpg" alt="" class="serviceslide ">
+        <img src="images/slider/salon2.jpg" alt="" class="serviceslide">
+
+
+        
+        <div class="suivant">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+
+        </div>
+        <div class="precedent">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+
+        </div>
+
+        <div class="step-slide">
+            <div class="step" style = "opacity:1;"></div>
+            <div class="step"></div>
+            <div class="step" ></div>
+            <div class="step"></div>
+            <div class="step"></div>
+
+        </div>
+    
+
         
     </div>
 
@@ -141,5 +168,6 @@
 
 
     <script src="js/effetLocationVente.js"></script>
+    <script src="js/serviceSliderAuto.js"></script>
 </body>
 </html>
