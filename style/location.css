@@ -8,6 +8,7 @@ html{
     --headerColorText:#0102fd ;
     --headerMainColor: #ffc10a;
     --whiteColor : #ffffff;
+    --blackColor: #000000;
 }
 
 .header-blank{
@@ -21,20 +22,92 @@ html{
     margin: 20px 10px 10px 10px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
    /*height: 50px;*/
     /*width: 100%;*/
 }
 
 .pub-location{
     border-radius: 30px;
-    border: 2px solid red;
+    border: none;
+    /*border: 2px solid red;*/
+
     height: 390px;
     width: 475px;
     margin: 8px;
+    position: relative;
+    cursor: pointer;
 }
 .pub-location img{
     height: 390px;
     width: 475px;
     border-radius: 30px;
+
+}
+
+.pub-location-information{
+    width: 100%;
+    /*height: 50px;*/
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /*background-color: var(--whiteColor);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;*/
+    background-color : rgba(255,255,255,0.8); 
+    z-index: 10;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pub-location-information h2{
+    font-weight: bold;
+    opacity: 1;
+    color: var(--headerColorText);
+    opacity: 1;
+}
+
+.pub-localite{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    /*border: 1px solid black;*/
+}
+
+.pub-localite span{
+    /*border: 1px solid black;*/
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.pub-localite span i{
+    font-size: 27px;
+    color: var(--blackColor);
+
+}
+
+.pub-localite p{
+    /*border: 1px solid black;*/
+    color: var(--blackColor);
+}
+
+.loyer-prix{
+    z-index: 12;
+    background-color: var(--headerMainColor);
+    /*border-radius: 30px;*/
+    color: var(--whiteColor);
+    opacity: 1;
+    border-radius: 15px;
+
+}
+
+.loyer-prix p{
+    color: var(--whiteColor);
+    margin: 6px;
+    font-weight: bold;
 
 }

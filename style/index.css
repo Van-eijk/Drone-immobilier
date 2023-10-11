@@ -33,11 +33,12 @@ body{
 }
 
 .search-box{
-    background-color: var(--whiteColor);
+    /*background-color: var(--whiteColor);*/
+    background-color : rgba(255,255,255,0.9); /* gestion de la transparence */
     width: 50%;
     height: 36%;
     border-radius: 30px;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     display: flex;
     align-items: center;
     justify-content: space-around;

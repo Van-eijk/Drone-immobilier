@@ -13,13 +13,17 @@ html{
 .search-box-filter{
     border-top: 5px solid var(--whiteColor);
     display: flex;
+    flex-wrap: wrap;
     background-color: var(--headerMainColor);
     color: var(--whiteColor);
     font-weight: bold;
+    width: 100%;
+    /*border: 2px solid black;*/
 }
 
 .form-search-filter{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     align-items: center;
