@@ -18,6 +18,7 @@ html{
     color: var(--whiteColor);
     font-weight: bold;
     width: 100%;
+    position: relative;
     /*border: 2px solid black;*/
 }
 

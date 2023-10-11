@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="header-search/header-search.css">
 </head>
 <body>
-    <?php include('header/header.php') ?>
+    <?php 
+        include('header/header.php');
+    ?>
     <div class="header-blank">
         <!-- VIDE -->
 
@@ -33,112 +35,127 @@
     <?php include('header-search/header-search.php') ?>
 
     <div class="location-main-content">
+
+
         <div class="pub-location">
-            <img src="images/location/location_villa1.jpg" alt="location_villa1">
-            <div class="pub-location-information">
-                <div class="pub-titre-localite">
-                    <h2>Maison à louer - 7 Pièces</h2>
-                    <div class="pub-localite">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Cameroun - Douala -1</p>
+           <a href="pub-location-details.php">
+                <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                <div class="pub-location-information">
+                    <div class="pub-titre-localite">
+                        <h2>Maison à louer - 7 Pièces</h2>
+                        <div class="pub-localite">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>Cameroun - Douala -1</p>
+                        </div>
                     </div>
-                </div>
-                <div class="loyer-prix">
-                    <p>Loyer : 50.000 Fcfa / mois</p>
-                </div>
+                    <div class="loyer-prix">
+                        <p>Loyer : 50.000 Fcfa / mois</p>
+                    </div>
 
-            </div>
-
+                </div>
+           </a>
         </div>
 
+
+
         <div class="pub-location">
-            <img src="images/location/location_villa1.jpg" alt="location_villa1">
-            <div class="pub-location-information">
-                <div class="pub-titre-localite">
-                    <h2>Maison à louer - 7 Pièces</h2>
-                    <div class="pub-localite">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Cameroun - Douala -2</p>
+           <a href="pub-location-details.php">
+                <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                <div class="pub-location-information">
+                    <div class="pub-titre-localite">
+                        <h2>Maison à louer - 7 Pièces</h2>
+                        <div class="pub-localite">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>Cameroun - Douala -1</p>
+                        </div>
                     </div>
-                </div>
-                <div class="loyer-prix">
-                    <p>Loyer : 50.000 Fcfa / mois</p>
-                </div>
+                    <div class="loyer-prix">
+                        <p>Loyer : 50.000 Fcfa / mois</p>
+                    </div>
 
-            </div>
-
+                </div>
+           </a>
         </div>
 
+
         <div class="pub-location">
-            <img src="images/location/location_villa1.jpg" alt="location_villa1">
-            <div class="pub-location-information">
-                <div class="pub-titre-localite">
-                    <h2>Maison à louer - 7 Pièces</h2>
-                    <div class="pub-localite">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Cameroun - Douala -3</p>
+           <a href="pub-location-details.php">
+                <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                <div class="pub-location-information">
+                    <div class="pub-titre-localite">
+                        <h2>Maison à louer - 7 Pièces</h2>
+                        <div class="pub-localite">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>Cameroun - Douala -1</p>
+                        </div>
                     </div>
-                </div>
-                <div class="loyer-prix">
-                    <p>Loyer : 50.000 Fcfa / mois</p>
-                </div>
+                    <div class="loyer-prix">
+                        <p>Loyer : 50.000 Fcfa / mois</p>
+                    </div>
 
-            </div>
-
+                </div>
+           </a>
         </div>
 
+
         <div class="pub-location">
-            <img src="images/location/location_villa1.jpg" alt="location_villa1">
-            <div class="pub-location-information">
-                <div class="pub-titre-localite">
-                    <h2>Maison à louer - 7 Pièces</h2>
-                    <div class="pub-localite">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Cameroun - Douala -1</p>
+           <a href="pub-location-details.php">
+                <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                <div class="pub-location-information">
+                    <div class="pub-titre-localite">
+                        <h2>Maison à louer - 7 Pièces</h2>
+                        <div class="pub-localite">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>Cameroun - Douala -1</p>
+                        </div>
                     </div>
-                </div>
-                <div class="loyer-prix">
-                    <p>Loyer : 50.000 Fcfa / mois</p>
-                </div>
+                    <div class="loyer-prix">
+                        <p>Loyer : 50.000 Fcfa / mois</p>
+                    </div>
 
-            </div>
-
+                </div>
+           </a>
         </div>
 
+
+
         <div class="pub-location">
-            <img src="images/location/location_villa1.jpg" alt="location_villa1">
-            <div class="pub-location-information">
-                <div class="pub-titre-localite">
-                    <h2>Maison à louer - 7 Pièces</h2>
-                    <div class="pub-localite">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Cameroun - Douala -1</p>
+           <a href="pub-location-details.php">
+                <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                <div class="pub-location-information">
+                    <div class="pub-titre-localite">
+                        <h2>Maison à louer - 7 Pièces</h2>
+                        <div class="pub-localite">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>Cameroun - Douala -1</p>
+                        </div>
                     </div>
-                </div>
-                <div class="loyer-prix">
-                    <p>Loyer : 50.000 Fcfa / mois</p>
-                </div>
+                    <div class="loyer-prix">
+                        <p>Loyer : 50.000 Fcfa / mois</p>
+                    </div>
 
-            </div>
-
+                </div>
+           </a>
         </div>
 
+
         <div class="pub-location">
-            <img src="images/location/location_villa1.jpg" alt="location_villa1">
-            <div class="pub-location-information">
-                <div class="pub-titre-localite">
-                    <h2>Maison à louer - 7 Pièces</h2>
-                    <div class="pub-localite">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Cameroun - Douala -1</p>
+           <a href="pub-location-details.php">
+                <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                <div class="pub-location-information">
+                    <div class="pub-titre-localite">
+                        <h2>Maison à louer - 7 Pièces</h2>
+                        <div class="pub-localite">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>Cameroun - Douala -1</p>
+                        </div>
                     </div>
-                </div>
-                <div class="loyer-prix">
-                    <p>Loyer : 50.000 Fcfa / mois</p>
-                </div>
+                    <div class="loyer-prix">
+                        <p>Loyer : 50.000 Fcfa / mois</p>
+                    </div>
 
-            </div>
-
+                </div>
+           </a>
         </div>
         
 
