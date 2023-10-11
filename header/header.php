@@ -10,7 +10,7 @@
 
 <header>
         <div class="main-logo">
-            <img src="<?php echo $lienLogo ; ?>" alt="">
+            <a href="index.php"><img src="<?php echo $lienLogo ; ?>" alt=""></a>
 
         </div>
 
@@ -23,7 +23,7 @@
                     
 
                     <ul class="sousmenu" >
-                        <li><a href="" style="border-top-left-radius: 5px; border-top-right-radius: 5px; " >Location</a></li>
+                        <li><a href="location.php" style="border-top-left-radius: 5px; border-top-right-radius: 5px; " >Location</a></li>
                         <li><a href="">Vente</a></li>
                         <li><a href="" style="border-radius: 5px;" >Gestion immobilière</a></li>
                     </ul>

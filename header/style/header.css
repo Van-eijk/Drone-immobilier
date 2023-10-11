@@ -85,6 +85,7 @@ header{
 .menuderoulant li a:hover {
     /*background-color: #199BD2;*/
     border-bottom: 4px solid var(--headerMainColor);
+    transition: 0.1s;
 
 }
 

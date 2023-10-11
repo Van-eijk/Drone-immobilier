@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+}
+
+.header-blank{
+    height: 70px;
+    width: 100%;
+    background-color: var(--whiteColor);
+}
+
+.location-main-content{
+    border: 1px solid black;
+    margin: 20px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+   /*height: 50px;*/
+    /*width: 100%;*/
+}
+
+.pub-location{
+    border-radius: 30px;
+    border: 2px solid red;
+    height: 390px;
+    width: 475px;
+    margin: 8px;
+}
+.pub-location img{
+    height: 390px;
+    width: 475px;
+    border-radius: 30px;
+
+}
