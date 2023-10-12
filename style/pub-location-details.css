@@ -1,7 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
+html{
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+}
 
 .header-blank-location{
     height: 70px;
     width: 100%;
     background-color: var(--whiteColor);
+
+}
+
+.pub-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--headerColorText);
+    color: var(--whiteColor);
+    font-size: large;
+    padding: 10px;
+    /*height: 100px;*/
+}
+
+.pub-option span{
+    width: 40px;
+    height: 40px;
+    /*border: 1px solid black;*/
+    margin: 4px;
+}
+
+.pub-option span i{
+    font-size: 30px;
+}
+
+.imprimer-fav, .imprimer, .fav, .visite-whatsapp, .visite{
+    display: flex;
+    align-items: center;
+    /*border: 1px solid black;*/
+}
+
+.visite{
+    background-color: var(--headerMainColor);
+    padding: 0px 8px 0px 5px;
+    border-radius: 25px;
+}
+
+.imprimer{
+    margin-right: 15px;
 }

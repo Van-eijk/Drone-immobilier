@@ -19,7 +19,7 @@ html{
 
 .location-main-content{
     border: 1px solid black;
-    margin: 20px 10px 10px 10px;
+    margin: 100px 10px 10px 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ html{
     /*border: 2px solid red;*/
 
     height: 390px;
-    width: 475px;
+    width: 455px;
     margin: 8px;
     position: relative;
     cursor: pointer;
@@ -44,7 +44,7 @@ html{
 }
 .pub-location img{
     height: 390px;
-    width: 475px;
+    width: 455px;
     border-radius: 30px;
 
 }
@@ -59,7 +59,7 @@ html{
     /*background-color: var(--whiteColor);
     background: rgba(0, 0, 0, 0.5);
     opacity: 0.5;*/
-    background-color : rgba(255,255,255,0.8); 
+    background-color : rgba(255,255,255,0.7); 
     z-index: 10;
     border-radius: 0px 0px 30px 30px;
     display: flex;
@@ -72,32 +72,49 @@ html{
     opacity: 1;
     color: var(--headerColorText);
     opacity: 1;
+    font-size: large;
 }
 
-.pub-localite{
+/*.pub-location-information div{
+    border: 1px solid black;
+
+}*/
+
+.pub-localite-date{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /*align-items: center;*/
     margin-top: 5px;
     /*border: 1px solid black;*/
+   /* width: 100%;*/
 }
 
-.pub-localite span{
+.pub-localite-date span{
     /*border: 1px solid black;*/
     height: 30px;
     width: 30px;
     margin-right: 10px;
 }
 
-.pub-localite span i{
-    font-size: 27px;
+.pub-localite-date span i{
+    font-size: 20px;
     color: var(--blackColor);
 
 }
 
-.pub-localite p{
+.pub-localite-date p{
     /*border: 1px solid black;*/
     color: var(--blackColor);
 }
+
+.pub-localite, .pub-date{
+    display: flex;
+    align-items: center;
+}
+
+/*.date_pub{
+    text-align: right;
+}*/
 
 .loyer-prix{
     z-index: 12;
@@ -106,6 +123,8 @@ html{
     color: var(--whiteColor);
     opacity: 1;
     border-radius: 15px;
+    /*border: 1px solid black;*/
+
 
 }
 
