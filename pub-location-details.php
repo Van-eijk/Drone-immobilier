@@ -77,8 +77,13 @@
         <div class="main-details-pub">
             <div class="all-picture-pub">
                 <div class="main-picture-pub">
-                    
+
                     <img src="Images/location/location_villa1.jpg" alt="">
+
+                    <div class="bouton-next-prev">
+                        <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+                        <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                    </div>
 
                 </div>
                 <div class="picture-pub">

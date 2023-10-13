@@ -27,6 +27,7 @@ html{
     font-size: large;
     padding: 10px;
     position: fixed;
+    z-index: 10;
     width: 100%;
     /*height: 100px;*/
 }
@@ -90,7 +91,38 @@ html{
     width: 850px;
     height: 600px;
     border: 2px solid black;
-    
+    position: relative;
+    z-index: 0;
+
+}
+
+.bouton-next-prev{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid yellow;
+}
+
+.bouton-next-prev span{
+   width: 40px;
+   width: 40px;
+   margin: 0px 4px 0px 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid yellow;
+   cursor: pointer;
+
+
+}
+
+.bouton-next-prev i{
+    font-size: 30px;
+    color: var(--whiteColor);
+    opacity: 0.8;
 }
 
 .picture-pub{
