@@ -33,6 +33,12 @@
         <div class="pub-option">
             <div class="num-pub">
                 <p>Pub-121020232036</p>
+
+                <div class="pub-date-header">
+                    <span><i class="fa-solid fa-clock"></i></span>
+                    <p>Il y'a 5 mois</p>
+                </div>
+
             </div>
 
             <div class="imprimer-fav">
@@ -66,6 +72,93 @@
             </div>
 
 
+        </div>
+
+        <div class="main-details-pub">
+            <div class="all-picture-pub">
+                <div class="main-picture-pub">
+                    
+                    <img src="Images/location/location_villa1.jpg" alt="">
+
+                </div>
+                <div class="picture-pub">
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+
+                    <div class="picture">
+                        <img src="Images/location/location_villa1.jpg" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="description-pub">
+            <div class="description-header">
+
+                <div class="titre-caracteristiques">
+
+                    <div class="titre">
+                        <h2>Maison à louer - 7 pieces</h2>
+
+                    </div>
+
+                    <div class="caracteristique">
+                        <h3> 4 chambres - 1 salon - 1 cuisine</h3>
+
+                    </div>
+
+                </div>
+                <div class="pub-prix-localisation">
+                    <div class="pub-prix">
+                        <p>Loyer : 50.000 fr par mois</p>
+
+                    </div>
+                    <div class="pub-local">
+                        <p>Cameroun-Yaounde-Bastos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-description">
+                <p>
+                    Dans l'agréable quartier d'Aiguelongue, villa F4 de 120m² sur un grand jardin arboré de 665m², terrasse, garage et parking.
+
+                    Vous disposez en rez-de-chaussée d'un séjour avec salle à manger, d'une cuisine aménagée, d'une buanderie, d'une première chambre, d'une salle d'eau et de toilettes séparées.
+                    Le premier étage se compose de deux chambres, d'une salle de bains et de toilettes séparés.
+
+                    Cette villa est équipée d'une cheminée insert, d'une climatisation réversible dans le séjour et la salle à manger et de chauffages individuels électriques dans la cuisine et les chambres.
+
+                    Contactez vite IMMOBIS 04.67.60.31.60
+
+                    Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques
+                </p>
+            </div>
         </div>
 
     <h1>DETAILS DE LA PUBLICATION LOCATION</h1>

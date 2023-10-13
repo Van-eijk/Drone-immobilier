@@ -8,6 +8,7 @@ html{
     --headerColorText:#0102fd ;
     --headerMainColor: #ffc10a;
     --whiteColor : #ffffff;
+    --backgroundColorLocationPhoto : #f2f2f2 ;
 }
 
 .header-blank-location{
@@ -25,24 +26,30 @@ html{
     color: var(--whiteColor);
     font-size: large;
     padding: 10px;
+    position: fixed;
+    width: 100%;
     /*height: 100px;*/
 }
 
 .pub-option span{
-    width: 40px;
-    height: 40px;
-    /*border: 1px solid black;*/
-    margin: 4px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    margin: 1px;
 }
 
 .pub-option span i{
-    font-size: 30px;
+    font-size: 20px;
 }
 
-.imprimer-fav, .imprimer, .fav, .visite-whatsapp, .visite{
+.imprimer-fav, .imprimer, .fav, .visite-whatsapp, .visite, .pub-date-header, .num-pub{
     display: flex;
     align-items: center;
     /*border: 1px solid black;*/
+}
+
+.pub-date-header{
+    margin-left: 10px;
 }
 
 .visite{
@@ -53,4 +60,87 @@ html{
 
 .imprimer{
     margin-right: 15px;
+}
+
+.whatsapp-pub span{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.whatsapp-pub span i{
+    font-size: 30px;
+}
+
+.main-details-pub{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px 10px 50px;
+    margin-top: 60px;
+    background-color: var(--backgroundColorLocationPhoto) ;
+    /*overflow: auto;*/
+}
+
+.all-picture-pub{
+    display: flex;
+    width: 100%;
+}
+
+.main-picture-pub{
+    width: 850px;
+    height: 600px;
+    border: 2px solid black;
+    
+}
+
+.picture-pub{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 600px;
+}
+
+.picture{
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.picture img{
+    height: 120px;
+    width: 120px;
+}
+
+
+.description-pub{
+    border: 1px solid black;
+    padding: 10px 50px 10px 50px;
+}
+
+.description-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pub-prix{
+    background-color: var(--headerMainColor);
+    color: var(--whiteColor);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.main-description{
+    border: 2px solid blue;
+    margin-top: 30px;
+}
+
+.main-description p{
+    text-align: justify;
 }

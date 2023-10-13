@@ -10,7 +10,9 @@ html{
     --whiteColor : #ffffff;
     --blackColor: #000000;
 }
-
+/*header{
+    opacity: 1;
+}*/
 .header-blank{
     height: 70px;
     width: 100%;
@@ -111,10 +113,6 @@ html{
     display: flex;
     align-items: center;
 }
-
-/*.date_pub{
-    text-align: right;
-}*/
 
 .loyer-prix{
     z-index: 12;

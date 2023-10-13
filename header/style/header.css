@@ -20,7 +20,7 @@ header{
     width: 100%;
     padding-right: 10px;
     background-color: var(--whiteColor);
-    opacity: 0.9;
+    opacity: 1;
     color: var(--headerColorText);
     font-weight: bolder;
 
