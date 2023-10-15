@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="Icons/css/all.css">
 
     <link rel="stylesheet" href="style/pub-location-details.css">
+
+    <!-- Feuille de style du dossier footer-->
+    <link rel="stylesheet" href="footer/style/footer.css">
 </head>
 <body>
     <?php 
@@ -167,6 +170,9 @@
         </div>
 
     <h1>DETAILS DE LA PUBLICATION LOCATION</h1>
+
+
+    <?php include('footer/footer.php') ; ?>
     
 </body>
 </html>

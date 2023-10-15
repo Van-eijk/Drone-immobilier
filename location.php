@@ -22,6 +22,10 @@
 
     <link rel="stylesheet" href="style/location.css">
     <link rel="stylesheet" href="header-search/header-search.css">
+
+
+    <!-- Feuille de style du dossier footer-->
+    <link rel="stylesheet" href="footer/style/footer.css">
 </head>
 <body>
     <?php 
@@ -216,6 +220,8 @@
 
 
     <h1>LOCATION</h1>
+
+    <?php include('footer/footer.php') ; ?>
     
 </body>
 </html>

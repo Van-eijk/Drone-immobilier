@@ -23,6 +23,10 @@
 
         <!-- Feuille de style du dossier header-->
     <link rel="stylesheet" href="header/style/header.css">
+
+
+     <!-- Feuille de style du dossier footer-->
+     <link rel="stylesheet" href="footer/style/footer.css">
 </head>
 <body>
     <?php include("header/header.php"); ?>
@@ -165,6 +169,11 @@
 
     </div>
 
+
+    <!-- On inclut le pieds de page -->
+
+
+    <?php include('footer/footer.php') ; ?>
 
 
     <script src="js/effetLocationVente.js"></script>

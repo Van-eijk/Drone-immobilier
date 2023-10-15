@@ -35,7 +35,7 @@ html{
 .pub-option span{
     width: 35px;
     height: 35px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     margin: 1px;
 }
 
@@ -90,7 +90,7 @@ html{
 .main-picture-pub{
     width: 850px;
     height: 600px;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     position: relative;
     z-index: 0;
 
@@ -102,8 +102,9 @@ html{
     top: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    border: 2px solid yellow;
+    /*border: 2px solid yellow;*/
 }
 
 .bouton-next-prev span{
@@ -113,7 +114,7 @@ html{
    display: flex;
    justify-content: center;
    align-items: center;
-   border: 1px solid yellow;
+   /*border: 1px solid yellow;*/
    cursor: pointer;
 
 
@@ -126,7 +127,7 @@ html{
 }
 
 .picture-pub{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +140,7 @@ html{
     height: 120px;
     width: 120px;
     margin: 10px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .picture img{
@@ -149,7 +150,7 @@ html{
 
 
 .description-pub{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding: 10px 50px 10px 50px;
 }
 
@@ -169,7 +170,7 @@ html{
 }
 
 .main-description{
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     margin-top: 30px;
 }
 
