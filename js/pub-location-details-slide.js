@@ -3,11 +3,12 @@ let imagesSlide = document.getElementsByClassName('main-img'); // On récupère 
 let sidePicture = document.getElementsByClassName('side-picture'); // Ici on récupère l'ensemble des images secondaires
 /* On doit d'abord afficher la premiere image */
 
+let bordureImage = "4px solid var(--headerColorText)"; // On définit les bordures des images secondaires
 imagesSlide[0].classList.add('active');
 
 /* On met aussi en évidence l'image qui correspond dans le coté droit */
 
-//sidePicture[0].style.border = "4px solid var(--headerColorText)";
+sidePicture[0].style.border = bordureImage; // Ajout des bordures sur la première images
 
 
 
@@ -19,7 +20,8 @@ let nombreImageSlide = imagesSlide.length;
 
 function desactiverImages() {
     for (let i = 0; i < imagesSlide.length; i++) {
-        imagesSlide[i].classList.remove('active');
+        imagesSlide[i].classList.remove('active'); // On désactive toutes les images
+        sidePicture[i].style.border = "none"; // On enlève les bordures sur toutes les images
     }
 }
 
@@ -34,6 +36,7 @@ function nextPicture() {
 
     desactiverImages(); // On desactive toutes les images
     imagesSlide[etapeSlide].classList.add('active'); // On active uniquement l'image correspondant à l'etape actuelle
+    sidePicture[etapeSlide].style.border = bordureImage; // On met en évidence l'image active à travers les bordures
 }
 
 // La fonction suivante permet de passer de l'étape actuelle à l'étape précédente
@@ -47,5 +50,12 @@ function prevPicture() {
     }
     desactiverImages();
     imagesSlide[etapeSlide].classList.add('active');
+    sidePicture[etapeSlide].style.border = bordureImage; // On met en évidence l'image active à travers les bordures
+
 }
+
+
+// La fonction suivante permet de defiler les images automatiquement
+
+setInterval(nextPicture, 4000);
 
