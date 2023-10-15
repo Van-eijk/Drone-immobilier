@@ -81,45 +81,63 @@
             <div class="all-picture-pub">
                 <div class="main-picture-pub">
 
-                    <img src="Images/location/location_villa1.jpg" alt="">
+                    <img src="Images/location/location_villa1.jpg" class="main-img " alt="">
+
+                    <img src="Images/location/villa8.jpg" class="main-img " alt="">
+
+                    <img src="Images/location/villa7.jpg" class="main-img " alt="">
+
+                    <img src="Images/location/villa6.jpg" class="main-img " alt="">
+
+                    <img src="Images/location/villa5.jpg" class="main-img" alt="">
+
+                    <img src="Images/location/villa4.jpg" class="main-img " alt="">
+
+                    <img src="Images/location/villa3.jpeg" class="main-img " alt="">
+
+                    <img src="Images/location/villa2.png" class="main-img " alt="">
+
 
                     <div class="bouton-next-prev">
-                        <span><i class="fa-solid fa-circle-chevron-left"></i></span>
-                        <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                        <button onclick="prevPicture()" ><i class="fa-solid fa-circle-chevron-left"></i></button>
+                        <button onclick="nextPicture()"><i class="fa-solid fa-circle-chevron-right"></i></button>
                     </div>
 
                 </div>
+
+
                 <div class="picture-pub">
+
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/location_villa1.jpg" class="side-picture" alt="">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa8.jpg" alt="" class="side-picture">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa7.jpg" alt="" class="side-picture">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa6.jpg" alt="" class="side-picture">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa5.jpg" alt="" class="side-picture">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa4.jpg" alt="" class="side-picture">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa3.jpeg" alt="" class="side-picture">
                     </div>
 
                     <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" alt="">
+                        <img src="Images/location/villa2.png" alt="" class="side-picture">
                     </div>
                     
                 </div>
@@ -173,6 +191,8 @@
 
 
     <?php include('footer/footer.php') ; ?>
+
+    <script src="js/pub-location-details-slide.js"></script>
     
 </body>
 </html>
