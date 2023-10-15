@@ -98,6 +98,8 @@ html{
 
 }
 
+
+
 .main-picture-pub img{
     object-fit: cover;
     position: absolute;
@@ -108,6 +110,7 @@ html{
     height: 570px;
     opacity: 0;
     transition: .5s;
+    cursor: pointer;
 }
 
 .main-picture-pub img.active{
@@ -172,6 +175,7 @@ html{
     height: 120px;
     width: 120px;
     margin: 10px;
+    cursor: pointer;
     /*border: 20px solid black;*/
 }
 

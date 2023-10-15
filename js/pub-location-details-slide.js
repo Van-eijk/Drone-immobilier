@@ -55,7 +55,27 @@ function prevPicture() {
 }
 
 
+// La fonction suivante permet de selectionner les images secondaires au hasard
+
+function pictureRandom() {
+    for (let i = 0; i < sidePicture.length; i++) {
+        sidePicture[i].addEventListener('click', function () {
+
+            desactiverImages(); // On desactive toutes les images
+            imagesSlide[i].classList.add('active'); // On active uniquement l'image correspondant à l'etape actuelle
+            sidePicture[i].style.border = bordureImage; // On met en évidence l'image active à travers les bordures
+            etapeSlide = i; // On fait la mise à jour de l'étape
+
+        });
+    }
+}
+
+
 // La fonction suivante permet de defiler les images automatiquement
 
 setInterval(nextPicture, 4000);
+
+//setInterval(pictureRandom, 500);
+
+pictureRandom();
 

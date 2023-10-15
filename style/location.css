@@ -20,7 +20,7 @@ html{
 }
 
 .location-main-content{
-    border: 1px solid black;
+    /*border: 10px solid black;*/
     margin: 100px 10px 10px 10px;
     display: flex;
     justify-content: center;
