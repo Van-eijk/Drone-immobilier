@@ -194,7 +194,8 @@ html{
 .description-header{
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
+    border-bottom: 3px solid var(--headerMainColor);
     font-weight: 400;
 }
 
@@ -203,11 +204,12 @@ html{
 }
 
 .titre{
-    border: 2px solid red;
+    /*border: 2px solid red;*/
+    font-weight: 400;
 }
 
 .caracteristique{
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     width: 100%;
     display: flex;
     margin-top: 5px;
@@ -221,8 +223,12 @@ html{
 
 }
 
+.caracteristique p{
+    text-align: center;
+}
+
 .surface-terrain, .nbre-salon, .nbre-douche, .nbre-cuisine, .nbre-chambre, .nbre-parking, .nbre-autre-piece, .nbre-etage{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +249,7 @@ html{
 }*/
 
 .pub-prix-localisation{
-    border: 2px solid yellowgreen;
+    /*border: 2px solid yellowgreen;*/
     width: 250px;
 }
 

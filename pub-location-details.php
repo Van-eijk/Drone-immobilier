@@ -226,12 +226,11 @@
 
                     Contactez vite IMMOBIS 04.67.60.31.60
 
-                    Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques
+                    Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques.
                 </p>
             </div>
         </div>
 
-    <h1>DETAILS DE LA PUBLICATION LOCATION</h1>
 
 
     <?php include('footer/footer.php') ; ?>
