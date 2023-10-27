@@ -62,5 +62,5 @@ setInterval(function () {
     enleverActiveImage();
     serviceSlide[etape].classList.add('active');
     stepOn[etape].style.opacity = 1;
-}, 2000);
+}, 4000);
 

@@ -38,8 +38,10 @@
             </ul>
 
 
-            <div class="whatsapp">
-                <span><i class="fa-brands fa-whatsapp"></i></span>
+            <div class="whatsapp" title="Contactez-nous">
+                <a href="contactus.php">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                </a>
             </div>
             <div class="user">
                 <div class="icon-user">

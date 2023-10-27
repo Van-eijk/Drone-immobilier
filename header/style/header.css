@@ -164,7 +164,8 @@ header{
 }
 
 .whatsapp span i{
-    font-size: 28px;
+    font-size: 23px;
+    color: var(--whiteColor);
 }
 
 
@@ -195,7 +196,11 @@ header{
     background-color: #ffc10a;
 }
 
-.icon-user i,.whatsapp i{
-    font-size: 25px;
+.icon-user i{
+    font-size: 23px;
     color: #FFFFFF;
+}
+
+.whatsapp a{
+    text-decoration: none;
 }

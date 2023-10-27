@@ -175,7 +175,7 @@ body{
 
 .services-slide{
     height: 550px;
-    border: 10px solid blue;
+    /*border: 10px solid blue;*/
     padding: 0px 0px 0px 0px;
     position: relative;
 }

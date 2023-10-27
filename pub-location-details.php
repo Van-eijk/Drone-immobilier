@@ -155,7 +155,51 @@
                     </div>
 
                     <div class="caracteristique">
-                        <h3> 4 chambres - 1 salon - 1 cuisine</h3>
+                        <div class="surface-terrain">
+                            <span><i class="fa-solid fa-chart-area"></i></span>
+                            <p>1000 m²</p>
+                        </div>
+
+                        <div class="nbre-etage">
+                            <span><i class="fa-solid fa-building"></i></span>
+                            <p>5 Niveaux</p>
+                        </div>
+
+                        <div class="nbre-parking">
+                            <span><i class="fa-solid fa-square-parking"></i></span>
+                            <p>1 Parking</p>
+                        </div>
+
+                        <div class="nbre-salon">
+                            <span><i class="fa-solid fa-couch"></i></span>
+                            <p>1 Salon</p>
+                        </div>
+
+                        <div class="nbre-cuisine">
+                            <span><i class="fa-solid fa-kitchen-set"></i></span>
+                            <p>1 Cuisine</p>
+                        </div>
+
+                        <div class="nbre-chambre">
+                            <span><i class="fa-solid fa-bed"></i></span>
+                            <p>1 Chambre</p>
+                        </div>
+
+
+
+                        <div class="nbre-douche">
+                            <span><i class="fa-solid fa-shower"></i></span>
+                            <p>1 Douche</p>
+                        </div>
+
+                       
+
+                        <div class="nbre-autre-piece">
+                            <span><i class="fa-regular fa-square"></i></span>
+                            <p>1 Autres pieces</p>
+                        </div>
+
+                       
 
                     </div>
 
