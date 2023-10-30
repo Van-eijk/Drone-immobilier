@@ -80,6 +80,7 @@ header{
     /*border-right: 1px solid var(--headerMainColor);*/
     text-align: center;
     text-decoration: none;
+    color: var(--headerColorText);
 }
 
 .menuderoulant li a:hover {
@@ -91,6 +92,7 @@ header{
 
 .menuderoulant li a:active{
     background-color: #808080;
+    color: var(--headerMainColor);
 }
 
 .menuderoulant .sousmenu{
@@ -125,6 +127,8 @@ header{
     /*color: #FFFFFF;*/
     text-decoration: none;
     /*background-color: #808080;*/
+    color: var(--headerColorText);
+    /*color: yellow;*/
 
 
 }

@@ -23,8 +23,8 @@
                     
 
                     <ul class="sousmenu" >
-                        <li><a href="location.php" style="border-top-left-radius: 5px; border-top-right-radius: 5px; " >Location</a></li>
-                        <li><a href="">Vente</a></li>
+                        <li><a href="location.php?locavente=location" style="border-top-left-radius: 5px; border-top-right-radius: 5px; " >Location</a></li>
+                        <li><a href="location.php?locavente=vente">Vente</a></li>
                         <li><a href="" style="border-radius: 5px;" >Gestion immobilière</a></li>
                     </ul>
                 </li>
@@ -33,7 +33,7 @@
                 <li><a href="">Recrutement étranger et tourisme</a></li>
                 <li><a href="">Guide Besoin</a></li>
                 <li><a href="">Commerce generale</a></li>
-                <li><a href="">A propos de nous</a></li>
+                <li><a href="aboutus.php">A propos de nous</a></li>
                 
             </ul>
 

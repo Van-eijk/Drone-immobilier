@@ -3,6 +3,9 @@
 
     $lienLogo ="Images/logo2.png" ;
 
+
+
+   
     /*echo $_POST["locationVente"];*/
 ?>
 
@@ -37,6 +40,8 @@
     </div>
 
     <?php include('header-search/header-search.php') ;?>
+
+
 
     <div class="location-main-content">
 
@@ -218,10 +223,9 @@
     </div>
 
 
-
-    <h1>LOCATION</h1>
-
     <?php include('footer/footer.php') ; ?>
+
+    
     
 </body>
 </html>

@@ -29,7 +29,9 @@
     <?php include("header/header.php"); ?>
 
     <div class="form-header">
-        <h2>CONTACTEZ - NOUS </h2>
+        <div class="box-title">
+            <h1>CONTACTEZ-NOUS</h1>
+        </div>
     </div>
 
     <div class="main-content-contact">
