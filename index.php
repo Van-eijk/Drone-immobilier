@@ -146,26 +146,95 @@
         
     </div>
 
-    <p>massa</p>
-
-    <div style="font-size: 50px;">
-        <p>       
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro excepturi placeat corporis a culpa reprehenderit, ullam rerum? Libero beatae incidunt et quos exercitationem voluptatem error ad voluptatum dolor aliquid.
-            
-        </p>
+    <div class="min-presentation">
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, minus provident commodi, repellat officia id inventore quod cum repudiandae et tempore odio. Iure aperiam corrupti cumque fugiat error nemo tempora!
+            <strong>Drone immobilier</strong> est une entreprise à travers laquelle nous mettons notre savoir-faire et notre expérience au service de nos clients particuliers et professionnels depuis 2020.
 
         </p>
 
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sed ea explicabo voluptatem? Ipsum dolorem explicabo quo ipsam deserunt, dolorum reiciendis fuga nulla? Ipsum pariatur laudantium animi minus exercitationem voluptatem!
+            Notre priorité est de vous accompagner dans tous vos projets immobiliers, qu'il s'agisse de vente, d'achat, d'investissement immobilier, de gestion locative ou de location d'un bien au Cameroun et dans le monde. Cette complémentarité d'activités nous permet de mieux vous orienter sur l'ensemble de vos choix.
 
         </p>
 
         <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aperiam ratione vitae exercitationem, architecto voluptates eius maxime consequuntur tempora incidunt. Repellendus at necessitatibus, facere explicabo porro ducimus dicta officia perspiciatis?
+            Chacun de nos clients est unique et à ce titre, nos collaborateurs font du conseil, de l'information et de la recherche une priorité afin de vous aider, faciliter et sécuriser vos démarches.
+
         </p>
+    </div>
+
+
+    <div class="main-service-img">
+        <div class="img-service">
+            <div class="img">
+                <img src="Images/services/ServiceImmobilier.png" alt="">
+                <div class="action">
+                    <a href="">Location</a>
+                    <a href="">Vente</a>
+                    <a href="">Gest. Imo.</a>
+
+
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="Images/services/CONSTRUCTION.png" alt="">
+                <div class="action">
+                    <a href="">Nos offres</a>
+
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="Images/services/RECRUTEMENT.png" alt="">
+                <div class="action">
+                    <a href="">Nos offres</a>
+
+
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="Images/services/guide.png" alt="">
+                <div class="action">
+                    <a href="">Nos offres</a>
+
+
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="Images/services/commerce.png" alt="">
+                <div class="action">
+                    <a href="">Nos offres</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-presentation">
+        <div class="main-second-presentation">
+            <p>       
+                Votre agence immobilière <strong>DRONE IMMOBILIER</strong>vous accompagne dans tous vos projets immobiliers, qu’ils soient grands ou petits, qu’ils concernent la location ou la vente, qu’ils soient dans l’ancien ou le neuf.                
+            </p>
+            <p>
+                Ayant plus de demandes que d’offres pariculièrement au Cameroun et dans le monde entier, il est important de rester à l’affut de la moindre nouveauté mise sur le marché. C’est pour cela qu’il est primordiale de faire confiance à un expert du secteur. <strong>DRONE IMMOBILIER</strong> vous propose de nombreuses offres immobilières, mais aussi ses services tels que l’accompagnement juridique et la gestion administrative.
+
+            </p>
+
+            <p>
+                Faire appel à notre agence immobilière <strong>DRONE IMMOBILIER</strong>, c’est bénéficier d’un accompagnement personnalisé et sans faille. Nous vous aidons à déterminer votre budget, clarifier vos attentes, et réaliser votre projet immobilier. Faites-nous part de vos envies, et nous ferons notre maximum pour vous trouver le bien qui vous correspond.
+
+            </p>
+
+            <p>
+                Chez <strong>DRONE IMMOBILIER</strong>, nous vous proposons un large choix de biens à la vente, mais aussi à la location. Vous êtes à la recherche d’un appartement à louer ? Ou vous souhaitez faire gérer votre bien ? N'hésitez plus, <strong>DRONE IMMOBILIER</strong> est là pour vous !
+            </p>
+        </div>
+
+       
 
     </div>
 
