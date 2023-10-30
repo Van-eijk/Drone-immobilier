@@ -2,6 +2,8 @@
     // On définit le lien du logo pour cette page
 
     $lienLogo ="Images/logo2.png" ;
+    $title = "CONTACTEZ-NOUS";
+
 
     /*echo $_POST["locationVente"];*/
 ?>
@@ -15,6 +17,10 @@
     <link rel="stylesheet" href="style/contactus.css">
 
 
+    <link rel="stylesheet" href="header-title/header-title.css">
+
+
+
         <!-- Feuille de style des icones-->
         <link rel="stylesheet" href="Icons/css/all.css">
 
@@ -26,13 +32,13 @@
         <link rel="stylesheet" href="footer/style/footer.css">
 </head>
 <body>
-    <?php include("header/header.php"); ?>
+    <?php 
+        include("header/header.php"); 
+        include("header-title/header-title.php");
 
-    <div class="form-header">
-        <div class="box-title">
-            <h1>CONTACTEZ-NOUS</h1>
-        </div>
-    </div>
+    ?>
+
+    
 
     <div class="main-content-contact">
         <p>Merci de remplir ce formulaire, nous vous contacterons le plus tot possible...</p>

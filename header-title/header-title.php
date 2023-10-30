@@ -1,6 +1,3 @@
-<?php 
-    $title = "A PROPOS DE NOUS";
-?>
 
 
 <div class="header-title">

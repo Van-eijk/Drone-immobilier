@@ -3,7 +3,7 @@
 
     $lienLogo ="Images/logo2.png" ;
 
-    $title = "A PROPOS DE NOUS";
+    $title = "RECRUTEMENT ETRANGER & TOURISME";
 
 
     /*echo $_POST["locationVente"];*/
@@ -15,13 +15,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ;?></title>
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="style/aboutus.css">
+    <title>RECRUTEMENT ETRANGER & TOURISME</title>
+
+
+    <link rel="stylesheet" href="style/recrutement-etranger-tourisme.css">
     <link rel="stylesheet" href="header-title/header-title.css">
 
 
@@ -38,11 +35,11 @@
 </head>
 <body>
 
-
     <?php 
         include("header/header.php"); 
         include("header-title/header-title.php");
     ?>
+
 
     <p>Drone immobilier est une entreprise fiable et qui a déjà fait ses preuves</p>
 

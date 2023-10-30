@@ -3,10 +3,9 @@
 
     $lienLogo ="Images/logo2.png" ;
 
-    $title = "A PROPOS DE NOUS";
+    $title = "CONSTRUCTION & PRESERVATION";
 
 
-    /*echo $_POST["locationVente"];*/
 ?>
 
 
@@ -21,7 +20,7 @@
     
     
     
-    <link rel="stylesheet" href="style/aboutus.css">
+    <link rel="stylesheet" href="style/construction-preservation.css">
     <link rel="stylesheet" href="header-title/header-title.css">
 
 

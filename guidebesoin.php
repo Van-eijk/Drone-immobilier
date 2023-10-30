@@ -3,7 +3,7 @@
 
     $lienLogo ="Images/logo2.png" ;
 
-    $title = "A PROPOS DE NOUS";
+    $title = "GUIDE BESOIN";
 
 
     /*echo $_POST["locationVente"];*/
@@ -15,19 +15,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ;?></title>
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="style/aboutus.css">
+    <title>GUIDE BESOIN</title>
+
+    <link rel="stylesheet" href="style/guidebesoin.css">
     <link rel="stylesheet" href="header-title/header-title.css">
 
 
-
-     <!-- Feuille de style des icones-->
-     <link rel="stylesheet" href="Icons/css/all.css">
+    <!-- Feuille de style des icones-->
+    <link rel="stylesheet" href="Icons/css/all.css">
 
     <!-- Feuille de style du dossier header-->
     <link rel="stylesheet" href="header/style/header.css">
@@ -35,9 +30,10 @@
 
     <!-- Feuille de style du dossier footer-->
     <link rel="stylesheet" href="footer/style/footer.css">
+
+
 </head>
 <body>
-
 
     <?php 
         include("header/header.php"); 

@@ -3,7 +3,7 @@
 
     $lienLogo ="Images/logo2.png" ;
 
-    $title = "A PROPOS DE NOUS";
+    $title = "COMMERCE GENERAL";
 
 
     /*echo $_POST["locationVente"];*/
@@ -15,13 +15,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ;?></title>
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="style/aboutus.css">
+    <title>COMMERCE GENERAL</title>
+
+
+    <link rel="stylesheet" href="style/commerce-gen.css">
     <link rel="stylesheet" href="header-title/header-title.css">
 
 
@@ -38,13 +35,14 @@
 </head>
 <body>
 
-
     <?php 
         include("header/header.php"); 
         include("header-title/header-title.php");
     ?>
 
-    <p>Drone immobilier est une entreprise fiable et qui a déjà fait ses preuves</p>
+
+
+
 
 
     <!-- On inclut le pieds de page -->

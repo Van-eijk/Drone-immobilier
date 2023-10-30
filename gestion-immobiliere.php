@@ -3,10 +3,9 @@
 
     $lienLogo ="Images/logo2.png" ;
 
-    $title = "A PROPOS DE NOUS";
+    $title = "GESTION IMMOBILIERE";
 
 
-    /*echo $_POST["locationVente"];*/
 ?>
 
 
@@ -21,7 +20,7 @@
     
     
     
-    <link rel="stylesheet" href="style/aboutus.css">
+    <link rel="stylesheet" href="style/gestion-immobiliere.css">
     <link rel="stylesheet" href="header-title/header-title.css">
 
 
