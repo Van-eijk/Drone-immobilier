@@ -44,12 +44,14 @@
                 </a>
             </div>
             <div class="user">
-                <div class="icon-user">
-                    <span><i class="fa-solid fa-user"></i></span>
-                </div>
-                <div class="name-user">
-                    <p>Username</p>
-                </div>
+               <a href="login.php">
+                    <div class="icon-user">
+                        <span><i class="fa-solid fa-user"></i></span>
+                    </div>
+                    <div class="name-user">
+                        <p>Connexion</p>
+                    </div>
+               </a>
             </div>
         </div>
     </header>

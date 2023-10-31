@@ -181,9 +181,11 @@ header{
 }
 
 
-.user{
+.user a{
     display: flex;
     align-items: center;
+    /*border: 1px solid black;*/
+    text-decoration: none;
 }
 
 .icon-user, .whatsapp{
