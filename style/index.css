@@ -2,6 +2,7 @@ html{
     --whiteColor: #ffffff;
     --headerColorText:#0102fd ;
     --headerMainColor: #ffc10a;
+    --min-width: 943px ;
 }
 
 *{
@@ -14,6 +15,7 @@ html{
 body{
     height: 99%;
     width: 100%;
+    min-width: var(--min-width);
     
 }
 

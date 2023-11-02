@@ -2,7 +2,7 @@
     // On définit le lien du logo pour cette page
 
     $lienLogo ="../Images/logo2.png" ;
-    $title = "ADMINISTRATEUR";
+    $title = "MOT DE PASSE ADMINISTRATEUR OUBLIE ?";
 
 
     /*echo $_POST["locationVente"];*/
@@ -13,8 +13,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRONE IMMOBILIER - ADMIN</title>
-    <link rel="stylesheet" href="style-admin/index-admin.css">
+    <title>Drone immobilier - contactez nous</title>
+    <link rel="stylesheet" href="style-admin/forgot-password-admin.css">
 
 
     <link rel="stylesheet" href="../header-title/header-title.css">
@@ -24,6 +24,7 @@
         <!-- Feuille de style des icones-->
         <link rel="stylesheet" href="../Icons/css/all.css">
 
+       
 
 
         <!-- Feuille de style du dossier footer-->
@@ -38,6 +39,7 @@
     
 
     <div class="main-content-contact">
+        <p>Entrez votre adresse email à laquelle nous allons envoyer un code de vérification</p>
         <div class="main-form-contact">
             <form action="" method="post">
 
@@ -46,25 +48,18 @@
                     <input type="email" placeholder="Entrez votre adresse email" name="emilFormContact" autocomplete="none" autofocus>
                 </div>
 
-                <div class="password">
-                    <span><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" placeholder="Entrer votre mot de passe" name="password">
-                </div>
-
                 <div class="send-form">
                     <button type="submit">
-                        <p>Connexion</p>
+                        <p>Envoyer</p>
                     </button>
                 </div>
             </form>
         </div>
 
-        <div class="forgot-password">
-            <a href="forgot-password-admin.php">Mot de passe oublié ?</a>
+        <div class="already-account">
+            <p>Vous avez déjà un compte ? <a href="index.php">Connectez-vous !</a></p>
+            
         </div>
-
-        <a href="dashboard-admin.php">test</a>
-
     </div>
 
 
