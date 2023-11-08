@@ -5,6 +5,8 @@
         private $idAdmin;
         private $idMembreFK;
         private $poste;
+        /* la variable "POSTE" peut prendre 2 valeurs : "admin" ou "adjoint" */
+
 
         // les accesseurs & mutateurs
 
@@ -58,7 +60,7 @@
         }
 
         public function afficherListeMembre(){
-            
+
         }
 
 

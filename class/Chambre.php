@@ -6,7 +6,7 @@
         private $idChambre;
         private $idBienFK;
         private $superficieChambre;
-        private $moderneChambre;
+        private $moderneChambre; // peut prendre 2 valeurs: 'OUI' ou 'NON'
 
         // Accesseurs et mutateurs
 

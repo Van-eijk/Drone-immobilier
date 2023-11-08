@@ -2,14 +2,16 @@
     class Bien{
         // les attributs
         private $idBien;
-        private $idVisiteurFK;
+        private $idAdminFK;
         private $referenceBien;
         private $dateTimeBien;
         private $titreBien;
         private $descriptionBien;
-        private $locationVenteBien;
+        private $locationVenteBien; // peut prendre 2 valeurs : "location" ou "vente"
         private $prixBien;
-        private $lieuBien;
+        /*private $lieuBien;*/
+        private $paysBien;
+        private $villeBien;
         private $lienPhoto1;
         private $lienPhoto2;
         private $lienPhoto3;
@@ -27,12 +29,14 @@
         public function setIdBien($idBien){
             $this->idBien = $idBien;
         }
-        public function getIdVisiteurFK(){
-            return $this->idVisiteurFK;
-        }
-        public function setIdVisiteurFK($idVisiteurFK){
-            $this->idVisiteurFK = $idVisiteurFK;
-        }
+
+       public function getIdAdminFK(){
+        return $this->idAdminFK;
+       }
+       public function setIdAdminFK($idAdminFK){
+        $this->idAdminFK = $idAdminFK;
+       }
+
         public function getReferenceBien(){
             return $this->referenceBien;
         }
@@ -69,11 +73,18 @@
         public function setPrixBien($prixBien){
             $this->prixBien = $prixBien;
         }
-        public function getLieuBien(){
-            return $this->lieuBien;
+        public function getPaysBien(){
+            return $this->paysBien;
         }
-        public function setLieuBien($lieuBien){
-            $this->lieuBien = $lieuBien;
+        public function setPaysBien($paysBien){
+            $this->paysBien = $paysBien;
+        }
+        public function getVilleBien(){
+            return $this->villeBien;
+
+        }
+        public function setVilleBien($villeBien){
+            $this->villeBien = $villeBien;
         }
         public function getLienPhoto1(){
             return $this->lienPhoto1;
@@ -128,16 +139,17 @@
         
         // constructeur
 
-        public function __construct($idBien, $idVisiteurFK, $referenceBien, $dateTimeBien, $titreBien, $descriptionBien, $locationVenteBien, $prixBien, $lieuBien, $lienPhoto1, $lienPhoto2, $lienPhoto3, $lienPhoto4, $lienPhoto5, $lienPhoto6, $lienPhoto7, $lienPhoto8){
+        public function __construct($idBien, $idAdminFK, $referenceBien, $dateTimeBien, $titreBien, $descriptionBien, $locationVenteBien, $prixBien, $paysBien, $villeBien, $lienPhoto1, $lienPhoto2, $lienPhoto3, $lienPhoto4, $lienPhoto5, $lienPhoto6, $lienPhoto7, $lienPhoto8){
             $this->idBien = $idBien;
-            $this->idVisiteurFK = $idVisiteurFK;
+            $this->idAdminFK = $idAdminFK;
             $this->referenceBien = $referenceBien;
             $this->dateTimeBien = $dateTimeBien;
             $this->titreBien = $titreBien;
             $this->descriptionBien = $descriptionBien;
             $this->locationVenteBien = $locationVenteBien;
             $this->prixBien = $prixBien;
-            $this->lieuBien = $lieuBien;
+            $this->paysBien = $paysBien;
+            $this->villeBien = $villeBien;
             $this->lienPhoto1 = $lienPhoto1;
             $this->lienPhoto2 = $lienPhoto2;
             $this->lienPhoto3 = $lienPhoto3;

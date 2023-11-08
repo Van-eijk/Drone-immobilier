@@ -3,7 +3,7 @@
         // les attributs
         private $idService;
         private $referenceService;
-        private $idAdminService;
+        private $idAdminFK;
         private $titreService;
         private $descriptionService;
         private $lienPhotoService;
@@ -25,11 +25,11 @@
         public function setReferenceService($referenceService){
             $this->referenceService = $referenceService;
         }
-        public function getIdAdminService(){
-            return $this->idAdminService;
+        public function getIdAdminFK(){
+            return $this->idAdminFK;
         }
-        public function setIdAdminService($idAdminService){
-            $this->idAdminService = $idAdminService;
+        public function setIdAdminFK($idAdminFK){
+            $this->idAdminFK = $idAdminFK;
         }
         public function getTitreService(){
             return $this->titreService;
@@ -64,10 +64,10 @@
 
         // Le constructeur
 
-        public function __construct($idService, $referenceService, $idAdminService, $titreService, $descriptionService, $lienPhotoService, $dateTimeService, $categorieService){
+        public function __construct($idService, $referenceService, $idAdminFK, $titreService, $descriptionService, $lienPhotoService, $dateTimeService, $categorieService){
             $this->idService = $idService;
             $this->referenceService = $referenceService;
-            $this->idAdminService = $idAdminService;
+            $this->idAdminFK = $idAdminFK;
             $this->titreService = $titreService;
             $this->descriptionService = $descriptionService;
             $this->lienPhotoService = $lienPhotoService;
