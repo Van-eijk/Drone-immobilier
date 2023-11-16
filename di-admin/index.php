@@ -39,11 +39,11 @@
 
     <div class="main-content-contact">
         <div class="main-form-contact">
-            <form action="" method="post">
+            <form action="loginAdmin.php" method="post">
 
                 <div class="email-form-contact">
                     <span><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" placeholder="Entrez votre adresse email" name="emilFormContact" autocomplete="none" autofocus>
+                    <input type="email" placeholder="Entrez votre adresse email" name="emailFormContact" autocomplete="none" autofocus>
                 </div>
 
                 <div class="password">
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="send-form">
-                    <button type="submit">
+                    <button type="submit" name="logAdmin">
                         <p>Connexion</p>
                     </button>
                 </div>

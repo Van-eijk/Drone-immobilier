@@ -94,5 +94,9 @@
         public function imprimerPublication(){
 
         }
+
+        public function connexionEspaceMembre(){
+            
+        }
     }
 ?>

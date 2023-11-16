@@ -64,6 +64,17 @@
                     <input type="tel" placeholder="Entrez votre numéro de telephone" name="telFormContact">
                 </div>
 
+                <div class="pays">
+                    <span><i class="fa-solid fa-earth-africa"></i></span>
+                    <input type="text" placeholder="Entrez votre pays" name="paysFormContact">
+                </div>
+
+                <div class="ville">
+                    <span><i class="fa-solid fa-city"></i></span>
+                    <input type="text" placeholder="Entrez votre ville" name="villeFormContact">
+                </div>
+            
+
                 <div class="password">
                     <span><i class="fa-solid fa-lock"></i></span>
                     <input type="password" placeholder="Créer un mot de passe" name="password">

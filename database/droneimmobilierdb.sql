@@ -254,6 +254,9 @@ SELECT * FROM visiteur ;
 INNER JOIN membre
 ON visiteur.id_visiteur = membre.id_visiteur_FK ;
 
+
+
+
 /* afficher la liste des admin (adresse ip, nom et poste)*/
 
 SELECT visiteur.adresse_ip, visiteur.datevisiteur, membre.id_membre, membre.nom_membre, membre.phone_membre, membre.email_membre, membre.pays_membre, membre.ville_membre, admin.poste FROM visiteur
