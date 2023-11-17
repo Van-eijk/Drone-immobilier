@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     // On définit le lien du logo pour cette page
 
     $lienLogo ="../Images/logo2.png" ;
@@ -32,6 +33,8 @@
 <body>
     <?php 
         include("../header-title/header-title.php");
+
+        include("loginAdmin.php");
 
     ?>
 

@@ -35,9 +35,9 @@
 
         // constructeur
 
-        public function __construct($poste){
+        /*public function __construct($poste){
             $this->poste = $poste;
-        }
+        }*/
 
         // les methodes
 

@@ -33,10 +33,10 @@
 
         // le constructeur
 
-        public function __construct($adresseIp){
+        /*public function __construct($adresseIp){
             $this->adresseIp = $adresseIp;
 
-        }
+        }*/
 
         // les methodes
 
