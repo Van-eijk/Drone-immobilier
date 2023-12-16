@@ -1,0 +1,15 @@
+html{
+    --headerColorText:#0102fd ;
+    --headerMainColor: #ffc10a;
+    --whiteColor : #ffffff;
+}
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.main-content-bien{
+    margin-top: 70px;
+
+}

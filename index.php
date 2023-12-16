@@ -1,3 +1,6 @@
+<?php session_start();?>
+
+
 <?php 
     // On définit le lien du logo pour cette page
 

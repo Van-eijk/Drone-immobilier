@@ -110,10 +110,9 @@
             $resultatConnexionMembre = $reqConnexionMembre -> fetch(); // On récupère les informations depuis la base de données
 
             if(!$resultatConnexionMembre){
-                //return "Adresse email ou mot de passe incorrect !";
-                session_start();
-                $_SESSION["erreurPassword"] = "Adresse email ou mot de passe incorrect";
-                header($lienPageConnexion);
+
+                return "Adresse email ou mot de passe incorrect !";
+
             }
             else{
 

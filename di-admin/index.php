@@ -1,13 +1,78 @@
 <?php 
-    session_start();
+    //session_start();
     // On définit le lien du logo pour cette page
 
     $lienLogo ="../Images/logo2.png" ;
     $title = "ADMINISTRATEUR";
 
 
-    /*echo $_POST["locationVente"];*/
 ?>
+
+
+<?php 
+    // Traitement des données du formulaire
+
+    // On inclut le fichier qui contient les informations de connexion à la base de données
+
+    $lienFichierBDD = "../database/config.php" ;
+     include($lienFichierBDD);
+ 
+    // On inclut la classe la classe Admin
+ 
+    include("../class/Admin.php");
+
+
+    $erreurPassword;
+
+
+    if(isset($_POST["logAdmin"])){
+
+        if(!empty($_POST["emailFormContact"])){
+
+            if(!empty($_POST["password"])){
+
+                /*echo $_SERVER['REMOTE_ADDR'];*/
+
+                $conAdmin = new Admin(); // On instencie la classe Admin                
+
+                $redirectionPageMembre = "Location:../index.php";
+                $redirectionPageAdmin = "Location:dashboard-admin.php" ;
+                $lienPageConnexion = "index.php";
+
+
+                $email = $_POST["emailFormContact"];
+
+                $passwordHache = sha1($_POST["password"]); // On hache le mot de passe afin de le comparer avec celui qui se trouve dans la BDD
+
+                $conAdmin->connexionEspaceMembre($lienFichierBDD, $lienPageConnexion, $redirectionPageAdmin, $redirectionPageMembre, $email, $passwordHache) ;
+
+                if(!empty($conAdmin->connexionEspaceMembre($lienFichierBDD, $lienPageConnexion, $redirectionPageAdmin, $redirectionPageMembre, $email, $passwordHache))){
+
+                    $erreurPassword = $conAdmin->connexionEspaceMembre($lienFichierBDD, $lienPageConnexion, $redirectionPageAdmin, $redirectionPageMembre, $email, $passwordHache) ;
+
+                }
+
+            }
+        }
+    }
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,11 +95,13 @@
         <!-- Feuille de style du dossier footer-->
         <link rel="stylesheet" href="../footer/style/footer.css">
 </head>
+
+
 <body>
     <?php 
         include("../header-title/header-title.php");
 
-        include("loginAdmin.php");
+        //include("loginAdmin.php");
 
     ?>
 
@@ -42,7 +109,8 @@
 
     <div class="main-content-contact">
         <div class="main-form-contact">
-            <form action="loginAdmin.php" method="post">
+
+            <form action="index.php" method="post">
 
                 <div class="email-form-contact">
                     <span><i class="fa-solid fa-envelope"></i></span>
@@ -53,6 +121,11 @@
                     <span><i class="fa-solid fa-lock"></i></span>
                     <input type="password" placeholder="Entrer votre mot de passe" name="password">
                 </div>
+                <?php 
+                    if(!empty($erreurPassword)){
+                        echo"".$erreurPassword."";
+                    }
+                ?>
 
                 <div class="send-form">
                     <button type="submit" name="logAdmin">
