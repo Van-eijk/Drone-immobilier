@@ -5,6 +5,9 @@
 
     $lienLogo ="../Images/logo2.png" ;
     $username = "Username";
+    $lienAccueil = "dashboard-admin.php";
+    $lienDeconnection = "log-out-admin.php";
+
 
 
 ?>

@@ -3,20 +3,22 @@
 <?php 
     $lienLogo;
     $username ;
+    $lienAccueil ;
+    $lienDeconnection ;
 ?>
 
 
 
 <header>
         <div class="main-logo">
-            <a href="index.php"><img src="<?php echo $lienLogo ; ?>" alt="logo"></a>
+            <a href="<?php echo $lienAccueil ; ?>"><img src="<?php echo $lienLogo ; ?>" alt="logo"></a>
 
         </div>
 
         <div class="menu">
             <ul class="menuderoulant">
                 <li> 
-                    <a href="dashboard-admin.php" title="Accueil">
+                    <a href="<?php echo $lienAccueil ; ?>" title="Accueil">
                         <div class="home">
                             <div class="home-icon">
                                 <span><i class="fa-solid fa-house"></i></span>
@@ -41,7 +43,7 @@
                     </a>
                 </li>
                 <li> 
-                    <a href="log-out-admin.php" title="Déconnexion">
+                    <a href="<?php echo $lienDeconnection ; ?>" title="Déconnexion">
                         <div class="log-out">
                             <div class="log-out-icon">
                                 <span><i class="fa-solid fa-right-from-bracket"></i></span>

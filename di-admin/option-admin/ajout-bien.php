@@ -5,6 +5,10 @@
 
     $lienLogo ="../../Images/logo2.png" ;
     $username = "Username";
+    $lienAccueil = "../dashboard-admin.php";
+    $lienDeconnection = "../log-out-admin.php";
+
+
 
 
 ?>
@@ -37,7 +41,7 @@
             <div class="main-content-bien">
                 <h1>Ajout bien</h1>
                 <div class="main-form">
-                    <form action="" method="post">
+                    <form action="ajout-bien-data.php" method="post" enctype="multipart/form-data">
                         <fieldset>
                             <legend>Catégorie</legend>
                             <div class="categorie-bien">
@@ -85,21 +89,21 @@
 
                             <div class="titre-bien">
                                 <span> <i class="fa-solid fa-pen-to-square"></i></span>
-                                <input type="text" placeholder="Ajouter un titre">
+                                <input type="text" placeholder="Ajouter un titre" name="titreBien" >
                             </div>
                             <div class="pays-bien">
                                 <span><i class="fa-solid fa-earth-americas"></i></span>
-                                <input type="text" placeholder="Pays">
+                                <input type="text" placeholder="Pays"  name="paysBien">
                             </div>
 
                             <div class="ville-bien">
                                 <span><i class="fa-solid fa-city"></i></span>
-                                <input type="text" placeholder="Ville">
+                                <input type="text" placeholder="Ville" name="villeBien">
                             </div>
 
                             <div class="prix-bien">
                                 <span><i class="fa-solid fa-sack-dollar"></i></span>
-                                <input type="text" placeholder="Prix">
+                                <input type="number" placeholder="Prix" name="prixBien">
                             </div>
 
                             <div class="description-bien">
@@ -127,36 +131,36 @@
                                 </div>
                                 <div class="superficie-terrain-maison">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="superficie du terrain">
+                                    <input type="number" placeholder="superficie du terrain" name="superficieTerrainMaison">
 
                                 </div>
                                 <div class="nbre-chambre">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="nombre de chambre">
+                                    <input type="number" placeholder="nombre de chambre" name="nbreChambre">
 
                                 </div>
 
                                 <div class="nbre-cuisine">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="nombre de cuisine">
+                                    <input type="number" placeholder="nombre de cuisine" name="nbreCuisine">
 
                                 </div>
 
                                 <div class="nbre-salon">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="nombre de salon">
+                                    <input type="number" placeholder="nombre de salon" name="nbreSalon">
 
                                 </div>
 
                                 <div class="nbre-douche">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="nombre de douche">
+                                    <input type="number" placeholder="nombre de douche"  name="nbreDouche">
 
                                 </div>
 
                                 <div class="nbre-autrePiece">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="autres pieces">
+                                    <input type="number" placeholder="autres pieces" name="autrePieceMaison">
 
                                 </div>
 
@@ -172,7 +176,7 @@
                                 </div>
                                 <div class="superficie-chambre">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="superficie de la chambre">
+                                    <input type="number" placeholder="superficie de la chambre" name="superficieChambre">
 
                                 </div>
                                 
@@ -181,13 +185,13 @@
                             <div id="caractImmeuble" class="caSpecifique">
                                 <div class="superficie-immeuble">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="superficie du terrain de l'immeuble">
+                                    <input type="number" placeholder="superficie du terrain de l'immeuble" name="superficieTerrainImmeuble">
 
                                 </div>
 
                                 <div class="nbreEtage-immeuble">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="nombre d'étage">
+                                    <input type="number" placeholder="nombre d'étage" name="nbreEtageImmeuble">
 
                                 </div>
                             
@@ -196,7 +200,7 @@
                             <div id="caractTerrain" class="caSpecifique">
                                 <div class="superficie-terrain">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="superficie du terrain">
+                                    <input type="number" placeholder="superficie du terrain" name="superficieTerrain">
 
                                 </div>
                             
@@ -205,13 +209,13 @@
                             <div id="caractMagasin" class="caSpecifique">
                                 <div class="superficie-magasin">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="superficie du magasin">
+                                    <input type="number" placeholder="superficie du magasin" name="superficieMagasin">
 
                                 </div>
 
                                 <div class="nbrepiece-magasin">
                                     <span><i class="fa-regular fa-square"></i></span>
-                                    <input type="text" placeholder="nombre de piece">
+                                    <input type="number" placeholder="nombre de piece" name="nbrePieceMagasin">
 
                                 </div>
                             
@@ -223,14 +227,14 @@
                             <legend>Photos</legend>
                             <div class="image-bien">
                                 
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
-                                <input type="file" name="" id="">
+                                <input type="file" name="p1" id="">
+                                <input type="file" name="p2" id="">
+                                <input type="file" name="p3" id="">
+                                <input type="file" name="p4" id="">
+                                <input type="file" name="p5" id="">
+                                <input type="file" name="p6" id="">
+                                <input type="file" name="p7" id="">
+                                <input type="file" name="p8" id="">
                                 
                             </div>
                         </fieldset>
