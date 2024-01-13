@@ -24,9 +24,9 @@
         /* ****   DECLARATION DES VARIABLES ******* */
 
 
-        $cheminTemporaireP1;
-        $cheminDefinitifP1;
-        $nomFichier1 ;
+        $cheminTemporaireP1 ="";
+        $cheminDefinitifP1 ="";
+        $nomFichier1 = "";
         $dateDuJour = date("dmyhis");
         $i = 0 ;
 
@@ -108,48 +108,10 @@
                                         $descriptionBien = $_POST['descriptionBien'] ;
 
 
-                                        if(isset($_FILES['p1'])){
+                                        if(isset($_FILES['pictures'])){
 
 
-                                            if(empty($_FILES['p2'])){
-                                                $_FILES['p2'] = $cheminPhotoDefaut ;
-
-                                            }
-
-
-                                            if(empty($_FILES['p3'])){
-                                                $_FILES['p3'] = $cheminPhotoDefaut ;
-
-                                            }
-
-                                            if(empty($_FILES['p4'])){
-                                                $_FILES['p4'] = $cheminPhotoDefaut ;
-
-                                            }
-
-                                            if(empty($_FILES['p5'])){
-                                                $_FILES['p5'] = $cheminPhotoDefaut ;
-
-                                            }
-
-                                            if(empty($_FILES['p6'])){
-                                                $_FILES['p6'] = $cheminPhotoDefaut ;
-
-                                            }
-
-                                            if(empty($_FILES['p7'])){
-                                                $_FILES['p7'] = $cheminPhotoDefaut ;
-
-                                            }
-
-                                            if(empty($_FILES['p8'])){
-                                                $_FILES['p8'] = $cheminPhotoDefaut ;
-
-                                            }
-
-
-
-
+                                            
 
 
 

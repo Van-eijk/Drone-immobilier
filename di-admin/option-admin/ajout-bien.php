@@ -227,14 +227,8 @@
                             <legend>Photos</legend>
                             <div class="image-bien">
                                 
-                                <input type="file" name="p1" id="">
-                                <input type="file" name="p2" id="">
-                                <input type="file" name="p3" id="">
-                                <input type="file" name="p4" id="">
-                                <input type="file" name="p5" id="">
-                                <input type="file" name="p6" id="">
-                                <input type="file" name="p7" id="">
-                                <input type="file" name="p8" id="">
+                                <input type="file" name="pictures[]" id="" multiple required>
+                                
                                 
                             </div>
                         </fieldset>
