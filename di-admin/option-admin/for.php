@@ -4,7 +4,7 @@
         $cheminDefinitif = "";
         $nomFichier="";
         $photo = array();
-        $i = 0 ; // entier permettant de definir le nom de chaque fichier
+        $i = 1 ; // entier permettant de definir le nom de chaque fichier
 
 
         
@@ -34,7 +34,12 @@
                     array_push($photo, $cheminDefinitif); // on inserre chaque emplacement de fichier dans ce tableau
                    
                 }
+                else{
+                    return "Veuillez choisir uniquement des images";
+                }
                
+            }else{
+                return "une erreur s'est produite lors du transfert des fichiers";
             }
             $i++ ;
         
@@ -62,16 +67,24 @@
         if(isset($_FILES['picture'])){
 
             $toff = uploadImages($_FILES['picture'],$dossierSauv,$titre) ;
+
+            if(gettype($toff)  == "array"){
+                foreach($toff as $val){
+                    echo $val . '<br>';
+                }
+        
+                
+                /*for($i = 0 ; $i < count($photo) ; $i++){
+                        echo $photo[$i] . '<br>';
+                }*/
+
+            }
+            else{
+                echo $toff;
+            }
       
           
-            foreach($toff as $val){
-                echo $val . '<br>';
-            }
-    
-            
-            /*for($i = 0 ; $i < count($photo) ; $i++){
-                    echo $photo[$i] . '<br>';
-            }*/
+           
             
         }
 
@@ -107,6 +120,10 @@
         <input type="submit" value="send" name="send">
 
     </form>
-    <img src="<?php echo $toff[0]; ?>" alt="">
+    <img src="<?php 
+        if(gettype($toff)  == "array"){
+            echo $toff[0]; 
+        }
+    ?>" alt="">
 </body>
 </html>
