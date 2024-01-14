@@ -1,20 +1,20 @@
 <?php 
-    $photo = array();
-    $dateDuJour = date("dmyhis");
-    $dossierSauv = "sauv/";
-    $cheminDefinitif = "";
-    $nomFichier="";
-        
-        //echo $photo[0];
-    if(isset($_POST['send'])){
-        foreach($_FILES['picture']['tmp_name'] as $key => $tmp_name){
-            $nbreAleatoire = rand(0,1000000000000); // On genere un nombre aleatoire qui nous permettra de definir le nom de chaque fichier
+    function uploadImages($listPicture, $cheminSauvegarde, $titreBien){
+        $dateDuJour = date("dmyhis");
+        $cheminDefinitif = "";
+        $nomFichier="";
+        $photo = array();
+        $i = 0 ; // entier permettant de definir le nom de chaque fichier
 
-            $name = $_FILES['picture']['name'][$key];  // On récupère le nom de chaque fichier
-            $type = $_FILES['picture']['type'][$key]; // on recupere le type de chaque fichier
-            $size = $_FILES['picture']['size'][$key]; // on recupère la taille de chaque fichier
-            $error = $_FILES['picture']['error'][$key]; // permet de verifier si l'importation des fichiers s'est deroulé sans erreur
-            $cheminTemporaire = $_FILES['picture']['tmp_name'][$key]; // récupération de l'emplacement temporaire de chaque fichier
+
+        
+        foreach($listPicture['tmp_name'] as $key => $tmp_name){
+
+            $name = $listPicture['name'][$key];  // On récupère le nom de chaque fichier
+            $type = $listPicture['type'][$key]; // on recupere le type de chaque fichier
+            $size = $listPicture['size'][$key]; // on recupère la taille de chaque fichier
+            $error = $listPicture['error'][$key]; // permet de verifier si l'importation des fichiers s'est deroulé sans erreur
+            $cheminTemporaire = $listPicture['tmp_name'][$key]; // récupération de l'emplacement temporaire de chaque fichier
 
 
             if($error == 0){
@@ -27,8 +27,8 @@
 
                 if(in_array($extension_upload,$extension_autorisees )){
                     $nomFichier = basename($name); // on recupère le nom d'origine du fichier
-                    $nomFichier = "photo" . $dateDuJour ."_".$nbreAleatoire ;
-                    $cheminDefinitif = $dossierSauv . $nomFichier ; // on definit l'emplacement definitif du fichier
+                    $nomFichier = $titreBien . $dateDuJour ."_".$i ;
+                    $cheminDefinitif = $cheminSauvegarde . $nomFichier ; // on definit l'emplacement definitif du fichier
                     move_uploaded_file($cheminTemporaire,$cheminDefinitif); // on stocke le fichier dans le serveur
     
                     array_push($photo, $cheminDefinitif); // on inserre chaque emplacement de fichier dans ce tableau
@@ -36,19 +36,46 @@
                 }
                
             }
+            $i++ ;
         
         }
 
-        //print_r($photo);
+        return $photo ;
+    }
+?>
 
-        foreach($photo as $val){
-            echo $val . '<br>';
+
+
+
+
+
+<?php 
+   
+    
+    $dossierSauv = "sauv/";
+    $titre = "toff";
+    $toff="";
+   
+        
+        //echo $photo[0];
+    if(isset($_POST['send'])){
+        if(isset($_FILES['picture'])){
+
+            $toff = uploadImages($_FILES['picture'],$dossierSauv,$titre) ;
+      
+          
+            foreach($toff as $val){
+                echo $val . '<br>';
+            }
+    
+            
+            /*for($i = 0 ; $i < count($photo) ; $i++){
+                    echo $photo[$i] . '<br>';
+            }*/
+            
         }
 
-        
-        /*for($i = 0 ; $i < count($photo) ; $i++){
-                echo $photo[$i] . '<br>';
-        }*/
+       
     }
 
     /*$nom = array("bobo", "van", "massa");
@@ -80,5 +107,6 @@
         <input type="submit" value="send" name="send">
 
     </form>
+    <img src="<?php echo $toff[0]; ?>" alt="">
 </body>
 </html>
