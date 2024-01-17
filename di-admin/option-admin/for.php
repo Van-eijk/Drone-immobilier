@@ -57,7 +57,7 @@
 <?php 
    
     
-    $dossierSauv = "sauv/";
+    $dossierSauv = "../sauv/";
     $titre = "toff";
     $toff="";
    

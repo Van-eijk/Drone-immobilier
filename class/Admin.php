@@ -65,51 +65,56 @@
 
 
 
-        public function uploadPicture($picture,$dossierSauvegarde){
+        public function uploadPicture($listPicture,$cheminSauvegarde,$titreBien){
 
             /* ****   DECLARATION DES VARIABLES ******* */
-
-
-            $cheminTemporaireP1;
-            $cheminDefinitifP1;
-            $nomFichier1 ;
             $dateDuJour = date("dmyhis");
+            $cheminDefinitif = "";
+            $nomFichier="";
+            $photo = array();
+            $i = 1 ; // entier permettant de definir le nom de chaque fichier
 
 
-            if($picture['error'] == 0){
-                // verification de l'extension du fichier
+            
+            foreach($listPicture['tmp_name'] as $key => $tmp_name){
 
-                $infoFichier = pathinfo($picture['name']);
+                $name = $listPicture['name'][$key];  // On récupère le nom de chaque fichier
+                $type = $listPicture['type'][$key]; // on recupere le type de chaque fichier
+                $size = $listPicture['size'][$key]; // on recupère la taille de chaque fichier
+                $error = $listPicture['error'][$key]; // permet de verifier si l'importation des fichiers s'est deroulé sans erreur
+                $cheminTemporaire = $listPicture['tmp_name'][$key]; // récupération de l'emplacement temporaire de chaque fichier
 
-                $extension_upload = $infoFichier['extension']; // on recupère l'extension du fichier envoyé par l'utilisateur
 
-                // Ensuite on crée la liste des extensions autorisées
+                if($error == 0){ // s'il n'ya aucune erreur lors du transfert de fichier
+                    $infoFichier = pathinfo($name);
+                    $extension_upload = $infoFichier['extension']; // On recupère l'extension de chaque fichier
 
-                $extension_autorisees = ['jpg','jpeg','png'];
+                    $extension_autorisees = ['jpg','jpeg','png']; // la liste des extensions autorisées
 
-                // verification de l'extension
+                    // verification de l'extension du fichier
 
-                if(in_array($extension_upload,$extension_autorisees)){
-
-                    // nous allons enfin valider l'envoi du fichier sur le serveur
-                    $cheminTemporaireP1 = $picture['tmp_name']; // recuperation de l'emplacement temporaire du fichier
-                    $nomFichier1 = basename($picture['name']); // Recuperation du nom d'origine du fichier
-                    $nomFichier1 =  $titreBien . $dateDuJour ;
-
+                    if(in_array($extension_upload,$extension_autorisees )){
+                        $nomFichier = basename($name); // on recupère le nom d'origine du fichier
+                        $nomFichier = $titreBien . $dateDuJour ."_".$i ;
+                        $cheminDefinitif = $cheminSauvegarde . $nomFichier ; // on definit l'emplacement definitif du fichier
+                        move_uploaded_file($cheminTemporaire,$cheminDefinitif); // on stocke le fichier dans le serveur
+        
+                        array_push($photo, $cheminDefinitif); // on inserre chaque emplacement de fichier dans ce tableau
+                    
+                    }
+                    else{
+                        return "Veuillez choisir uniquement des images";
+                    }
+                
+                }else{
+                    return "une erreur s'est produite lors du transfert des fichiers";
                 }
+                $i++ ;
+            
             }
 
-            //echo $nomFichier1 ;
-            //echo ("bonjour les zeros");
+            return $photo ;
 
-            // $dossierSauvegarde = '../../ImagesSauv/'; // chemein du dossier de sauvegarde sur le serveur
-
-            $cheminDefinitifP1 = $dossierSauvegarde . $nomFichier1 ;
-
-            echo $cheminDefinitifP1 ;
-            move_uploaded_file($cheminTemporaireP1,$cheminDefinitifP1);
-
-            //return $cheminDefinitifP1 ;
 
 
         }
