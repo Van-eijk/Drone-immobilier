@@ -80,10 +80,14 @@
                                                                         if(isset($_POST['nbreDouche'])){
                                                                             if(isset($_POST['autrePieceMaison'])){
 
-                                                                                $referenceBien = 'maison' . $date ;
+                                                        
 
 
                                                                                 $typeMaison = $_POST['typeMaison'] ;
+
+                                                                                $referenceBien = $typeMaison . $date ;
+
+
                                                                                 $superficieTerrainMaison = $_POST['superficieTerrainMaison'];
                                                                                 $nbreChambre = $_POST['nbreChambre'] ;
                                                                                 $nbreCuisine = $_POST['nbreCuisine'] ;
