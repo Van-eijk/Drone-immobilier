@@ -38,6 +38,9 @@
 
 
         if(isset($_POST['pub'])){
+
+
+
             if(isset($_POST['catBien'])){
                 $categorieBien = $_POST['catBien'] ;
                 if(isset($_POST['locationVente'])){
@@ -171,7 +174,72 @@
                                                 if($categorieBien == "chambre"){
                                                     if(isset($_POST['moderneChambre'])){
                                                         if(isset($_POST['superficieChambre'])){
+
+
+                                                            $referenceBien = "Chambre" . $date ;
+                                                            $modChambre = $_POST['moderneChambre'];
+                                                            $superChambre = $_POST['superficieChambre'];
+
+
+
+
+                                                            /****************        debut  */
+
+
+                                                            $reqChambre1 = $connexionDataBase -> prepare('INSERT INTO bien(id_AdminFK,reference_bien,titre_bien,description_bien,location_vente,prix_bien,pays_bien,ville_bien,lien_photo1) VALUES(:idAdminFK, :referenceBien, :titreBien, :descriptionBien, :locationVente, :prixBien, :paysBien, :villeBien, :lienPhoto)');
+                                                            $reqChambre1 -> execute(array(
+                                                                'idAdminFK' =>  $idAdmin, 
+                                                                'referenceBien' =>  $referenceBien, 
+                                                                'titreBien' =>  $titreBien, 
+                                                                'descriptionBien' =>  $descriptionBien, 
+                                                                'locationVente' =>  $locationVente, 
+                                                                'prixBien' =>  $prixBien, 
+                                                                'paysBien' =>  $paysBien, 
+                                                                'villeBien' =>  $villeBien, 
+                                                                'lienPhoto' =>  $serialImage
+
+                                                            ));
+
+                                                            $reqChambre1 -> closeCursor();
+
+
+
+                                                            $reqSelectIdBienChambre = $connexionDataBase -> prepare('SELECT id_Bien FROM bien WHERE reference_bien = :refBien');
+
+                                                            $reqSelectIdBienChambre -> execute(array(
+                                                                'refBien' => $referenceBien
+                                                            ));
+
+                                                            $requeteResultatIdBienChambre = $reqSelectIdBienChambre -> fetch();
+
+                                                            $resultatIdBienChambre = $requeteResultatIdBienChambre['id_Bien'];
+
                                                             
+
+
+                                                            $reqChambre2 = $connexionDataBase -> prepare('INSERT INTO chambre(id_bienFK, superficie_chambre, moderne_chambre) VALUES(:idBienFK, :superficieChambre, :moderneChambre)');
+                                                            $reqChambre2 -> execute(array(
+                                                                'idBienFK' =>  $resultatIdBienChambre, 
+                                                                'superficieChambre' => $superChambre , 
+                                                                'moderneChambre' =>   $modChambre
+                                                            ));
+                                                            $reqChambre2 -> closeCursor();
+
+
+                                                            header("Location:../dashboard-admin.php");
+
+                                                           
+
+
+
+
+
+
+
+
+
+
+                                                            /**************** fin */                                                            
                                                         
                                                         }
         
@@ -184,6 +252,64 @@
                                                 if($categorieBien == "magasin"){
                                                     if(isset($_POST['superficieMagasin'])){
                                                         if(isset($_POST['nbrePieceMagasin'])){
+
+                                                            $referenceBien = "Magasin" . $date ;
+                                                            $superficieMagasin = $_POST['superficieMagasin'];
+                                                            $nbrePieceMagasin = $_POST['nbrePieceMagasin'] ;
+
+
+
+
+                                                            /****************        debut  */
+
+
+                                                            $reqMagasin1 = $connexionDataBase -> prepare('INSERT INTO bien(id_AdminFK,reference_bien,titre_bien,description_bien,location_vente,prix_bien,pays_bien,ville_bien,lien_photo1) VALUES(:idAdminFK, :referenceBien, :titreBien, :descriptionBien, :locationVente, :prixBien, :paysBien, :villeBien, :lienPhoto)');
+                                                            $reqMagasin1 -> execute(array(
+                                                                'idAdminFK' =>  $idAdmin, 
+                                                                'referenceBien' =>  $referenceBien, 
+                                                                'titreBien' =>  $titreBien, 
+                                                                'descriptionBien' =>  $descriptionBien, 
+                                                                'locationVente' =>  $locationVente, 
+                                                                'prixBien' =>  $prixBien, 
+                                                                'paysBien' =>  $paysBien, 
+                                                                'villeBien' =>  $villeBien, 
+                                                                'lienPhoto' =>  $serialImage
+
+                                                            ));
+
+                                                            $reqMagasin1 -> closeCursor();
+
+
+
+                                                            $reqSelectIdBienMagasin = $connexionDataBase -> prepare('SELECT id_Bien FROM bien WHERE reference_bien = :refBien');
+
+                                                            $reqSelectIdBienMagasin -> execute(array(
+                                                                'refBien' => $referenceBien
+                                                            ));
+
+                                                            $requeteResultatIdBienMagasin = $reqSelectIdBienMagasin -> fetch();
+
+                                                            $resultatIdBienMagasin = $requeteResultatIdBienMagasin['id_Bien'];
+
+                                                            
+
+
+                                                            $reqMagasin2 = $connexionDataBase -> prepare('INSERT INTO magasin(id_bienFK, superficie_magasin, nombre_piece_magasin) VALUES(:idBienFK, :superficieMagasin, :nbrePieceMagasin)');
+                                                            $reqMagasin2 -> execute(array(
+                                                                'idBienFK' =>  $resultatIdBienMagasin, 
+                                                                'superficieMagasin' => $superficieMagasin , 
+                                                                'nbrePieceMagasin' =>   $nbrePieceMagasin
+                                                            ));
+                                                            $reqMagasin2 -> closeCursor();
+
+
+                                                            header("Location:../dashboard-admin.php");
+
+                                                        
+
+
+
+                                                            /**************** fin */      
                                                             
                                                         
                                                         }
@@ -196,6 +322,66 @@
                                                 if($categorieBien == "immeuble"){
                                                     if(isset($_POST['superficieTerrainImmeuble'])){
                                                         if(isset($_POST['nbreEtageImmeuble'])){
+
+
+
+                                                            $referenceBien = "Immeuble" . $date ;
+                                                            $superficieTerrainImmeuble = $_POST['superficieTerrainImmeuble'];
+                                                            $nbreEtageImmeuble = $_POST['nbreEtageImmeuble'] ;
+
+
+
+
+                                                            /****************        debut  */
+
+
+                                                            $reqImmeuble1 = $connexionDataBase -> prepare('INSERT INTO bien(id_AdminFK,reference_bien,titre_bien,description_bien,location_vente,prix_bien,pays_bien,ville_bien,lien_photo1) VALUES(:idAdminFK, :referenceBien, :titreBien, :descriptionBien, :locationVente, :prixBien, :paysBien, :villeBien, :lienPhoto)');
+                                                            $reqImmeuble1 -> execute(array(
+                                                                'idAdminFK' =>  $idAdmin, 
+                                                                'referenceBien' =>  $referenceBien, 
+                                                                'titreBien' =>  $titreBien, 
+                                                                'descriptionBien' =>  $descriptionBien, 
+                                                                'locationVente' =>  $locationVente, 
+                                                                'prixBien' =>  $prixBien, 
+                                                                'paysBien' =>  $paysBien, 
+                                                                'villeBien' =>  $villeBien, 
+                                                                'lienPhoto' =>  $serialImage
+
+                                                            ));
+
+                                                            $reqImmeuble1 -> closeCursor();
+
+
+
+                                                            $reqSelectIdBienImmeuble = $connexionDataBase -> prepare('SELECT id_Bien FROM bien WHERE reference_bien = :refBien');
+
+                                                            $reqSelectIdBienImmeuble -> execute(array(
+                                                                'refBien' => $referenceBien
+                                                            ));
+
+                                                            $requeteResultatIdBienImmeuble = $reqSelectIdBienImmeuble -> fetch();
+
+                                                            $resultatIdBienImmeuble = $requeteResultatIdBienImmeuble['id_Bien'];
+
+                                                            
+
+
+                                                            $reqImmeuble2 = $connexionDataBase -> prepare('INSERT INTO immeuble(id_bienFK, superficie_terrain_immeuble, nbre_etage) VALUES(:idBienFK, :superficieTerrain, :nbreEtage)');
+                                                            $reqImmeuble2 -> execute(array(
+                                                                'idBienFK' =>  $resultatIdBienImmeuble, 
+                                                                'superficieTerrain' => $superficieTerrainImmeuble , 
+                                                                'nbreEtage' =>   $nbreEtageImmeuble
+                                                            ));
+                                                            $reqImmeuble2 -> closeCursor();
+
+
+                                                            header("Location:../dashboard-admin.php");
+
+                                                        
+
+
+
+                                                            /**************** fin */      
                                                             
                                                         
                                                         }
@@ -208,6 +394,62 @@
         
                                                 if($categorieBien == "terrain"){
                                                     if(isset($_POST['superficieTerrain'])){
+
+                                                        $referenceBien = "Terrain" . $date ;
+                                                        $superficieTerrain = $_POST['superficieTerrain'];
+
+
+
+
+                                                        /****************        debut  */
+
+
+                                                        $reqTerrain1 = $connexionDataBase -> prepare('INSERT INTO bien(id_AdminFK,reference_bien,titre_bien,description_bien,location_vente,prix_bien,pays_bien,ville_bien,lien_photo1) VALUES(:idAdminFK, :referenceBien, :titreBien, :descriptionBien, :locationVente, :prixBien, :paysBien, :villeBien, :lienPhoto)');
+                                                        $reqTerrain1 -> execute(array(
+                                                            'idAdminFK' =>  $idAdmin, 
+                                                            'referenceBien' =>  $referenceBien, 
+                                                            'titreBien' =>  $titreBien, 
+                                                            'descriptionBien' =>  $descriptionBien, 
+                                                            'locationVente' =>  $locationVente, 
+                                                            'prixBien' =>  $prixBien, 
+                                                            'paysBien' =>  $paysBien, 
+                                                            'villeBien' =>  $villeBien, 
+                                                            'lienPhoto' =>  $serialImage
+
+                                                        ));
+
+                                                        $reqTerrain1 -> closeCursor();
+
+
+
+                                                        $reqSelectIdBienTerrain = $connexionDataBase -> prepare('SELECT id_Bien FROM bien WHERE reference_bien = :refBien');
+
+                                                        $reqSelectIdBienTerrain -> execute(array(
+                                                            'refBien' => $referenceBien
+                                                        ));
+
+                                                        $requeteResultatIdBienTerrain = $reqSelectIdBienTerrain -> fetch();
+
+                                                        $resultatIdBienTerrain = $requeteResultatIdBienTerrain['id_Bien'];
+
+                                                        
+
+
+                                                        $reqTerrain2 = $connexionDataBase -> prepare('INSERT INTO terrain(id_bienFK, superficie_terrain) VALUES(:idBienFK, :superficieTerrain)');
+                                                        $reqTerrain2 -> execute(array(
+                                                            'idBienFK' =>  $resultatIdBienTerrain, 
+                                                            'superficieTerrain' => $superficieTerrain , 
+                                                        ));
+                                                        $reqTerrain2 -> closeCursor();
+
+
+                                                        header("Location:../dashboard-admin.php");
+
+                                                        
+
+
+
+                                                            /**************** fin */   
                                                     
         
                                                     }
