@@ -1,7 +1,26 @@
 <?php 
+
+    setlocale(LC_MONETARY,"en_US");
     // On définit le lien du logo pour cette page
 
+
     $lienLogo ="Images/logo2.png" ;
+
+    // on importe la base de données
+    include("database/config.php");
+    $locaVente = "";
+
+    if(isset($_GET["locavente"])){
+
+        $locaVente = $_GET["locavente"];
+
+    }else{
+        $locaVente = "location";
+    }
+
+
+    
+
 
 
 
@@ -45,6 +64,76 @@
 
     <div class="location-main-content">
 
+        <!-- c'est ici que tout commence -->
+        <?php 
+            $reqSelectBienLocation = $connexionDataBase ->prepare('SELECT * FROM bien WHERE location_vente = :locaVente');
+
+            $reqSelectBienLocation -> execute(array(
+                'locaVente'=> $locaVente
+            ));
+
+        ?>
+
+        <?php 
+            while($donneesBienLocation =  $reqSelectBienLocation ->fetch()) {
+        ?>
+
+            <!-- c'est ici que tout commence -->
+            
+            
+
+
+            <div class="pub-location">
+                <a href="pub-location-details.php">
+                        <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                        <div class="pub-location-information">
+                            <div class="pub-titre-localite">
+
+                                <h2><?php echo ucfirst($donneesBienLocation['titre_bien']) ; ?></h2>
+                                
+                                <div class="pub-localite-date">
+                                    <div class="pub-localite">
+                                        <span><i class="fa-solid fa-location-dot"></i></span>
+                                        <p><?php echo ucfirst($donneesBienLocation['pays_bien']) ; ?> - <?php echo ucfirst($donneesBienLocation['ville_bien']) ; ?></p>
+                                    </div>
+
+                                    <div class="pub-date">
+                                        <span><i class="fa-solid fa-clock"></i></span>
+                                        <p class="date_pub"><?php echo $donneesBienLocation['date_time_bien']; ?></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="loyer-prix">
+                                <?php 
+                                    if($locaVente == "location"){ 
+                                ?>
+                                    <p>Loyer : <?php echo number_format($donneesBienLocation['prix_bien'],0,",",".") ; ?> Fcfa/ mois</p>
+
+                                    <?php 
+
+                                        }
+                                        else{ 
+                                    ?>
+                                       
+                                       <p>Prix : <?php echo number_format($donneesBienLocation['prix_bien'],0,",","."); ?> Fcfa</p>
+
+                                    <?php 
+                                        }
+                                    ?>
+                                
+                            </div>
+
+                        </div>
+                </a>
+            </div>
+                 
+                
+
+        <?php 
+            }
+        ?>
+
 
         <div class="pub-location">
            <a href="pub-location-details.php">
@@ -75,149 +164,7 @@
 
 
 
-        <div class="pub-location">
-           <a href="pub-location-details.php">
-                <img src="images/location/location_villa1.jpg" alt="location_villa1">
-                <div class="pub-location-information">
-                    <div class="pub-titre-localite">
-                        <h2>Maison à louer - 7 Pièces</h2>
-                        <div class="pub-localite-date">
-                            <div class="pub-localite">
-                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                <p>Cameroun - Douala -2</p>
-                            </div>
-
-                            <div class="pub-date">
-                                <span><i class="fa-solid fa-clock"></i></span>
-                                <p class="date_pub">Il y'a 5 mois</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="loyer-prix">
-                        <p>Loyer : 50.000 Fcfa / mois</p>
-                    </div>
-
-                </div>
-           </a>
-        </div>
-
-
-
-        <div class="pub-location">
-           <a href="pub-location-details.php">
-                <img src="images/location/location_villa1.jpg" alt="location_villa1">
-                <div class="pub-location-information">
-                    <div class="pub-titre-localite">
-                        <h2>Maison à louer - 7 Pièces</h2>
-                        <div class="pub-localite-date">
-                            <div class="pub-localite">
-                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                <p>Cameroun - Douala -3</p>
-                            </div>
-
-                            <div class="pub-date">
-                                <span><i class="fa-solid fa-clock"></i></span>
-                                <p class="date_pub">Il y'a 5 mois</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="loyer-prix">
-                        <p>Loyer : 50.000 Fcfa / mois</p>
-                    </div>
-
-                </div>
-           </a>
-        </div>
-
-
-
-        <div class="pub-location">
-           <a href="pub-location-details.php">
-                <img src="images/location/location_villa1.jpg" alt="location_villa1">
-                <div class="pub-location-information">
-                    <div class="pub-titre-localite">
-                        <h2>Maison à louer - 7 Pièces</h2>
-                        <div class="pub-localite-date">
-                            <div class="pub-localite">
-                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                <p>Cameroun - Douala -4</p>
-                            </div>
-
-                            <div class="pub-date">
-                                <span><i class="fa-solid fa-clock"></i></span>
-                                <p class="date_pub">Il y'a 5 mois</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="loyer-prix">
-                        <p>Loyer : 50.000 Fcfa / mois</p>
-                    </div>
-
-                </div>
-           </a>
-        </div>
-
-
-
-        <div class="pub-location">
-           <a href="pub-location-details.php">
-                <img src="images/location/location_villa1.jpg" alt="location_villa1">
-                <div class="pub-location-information">
-                    <div class="pub-titre-localite">
-                        <h2>Maison à louer - 7 Pièces</h2>
-                        <div class="pub-localite-date">
-                            <div class="pub-localite">
-                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                <p>Cameroun - Douala -5</p>
-                            </div>
-
-                            <div class="pub-date">
-                                <span><i class="fa-solid fa-clock"></i></span>
-                                <p class="date_pub">Il y'a 5 mois</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="loyer-prix">
-                        <p>Loyer : 50.000 Fcfa / mois</p>
-                    </div>
-
-                </div>
-           </a>
-        </div>
-
-
-
-
-        <div class="pub-location">
-           <a href="pub-location-details.php">
-                <img src="images/location/location_villa1.jpg" alt="location_villa1">
-                <div class="pub-location-information">
-                    <div class="pub-titre-localite">
-                        <h2>Maison à louer - 7 Pièces</h2>
-                        <div class="pub-localite-date">
-                            <div class="pub-localite">
-                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                <p>Cameroun - Douala -6</p>
-                            </div>
-
-                            <div class="pub-date">
-                                <span><i class="fa-solid fa-clock"></i></span>
-                                <p class="date_pub">Il y'a 5 mois</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="loyer-prix">
-                        <p>Loyer : 50.000 Fcfa / mois</p>
-                    </div>
-
-                </div>
-           </a>
-        </div>
+        
         
 
     </div>
