@@ -2,10 +2,25 @@
     // On définit le lien du logo pour cette page
 
     $lienLogo ="Images/logo2.png" ;
+    include("database/config.php");
 
-    /*echo $_POST["locationVente"];*/
+
+
+
 ?>
 
+<?php
+
+    /************* ON RECUPERE LES INFORMATIONS DEPUIS LA BASE DE DONNEES ********** */
+    if(isset($_GET["identifiantBien"])){
+        $identifiantBien = $_GET["identifiantBien"] ; // on recupère la variable provenant du lien
+
+
+        $reqDetailsBien = $connexionDataBase ->prepare('SELECT * FROM bien WHERE id_Bien = :identifiantB');
+        $reqDetailsBien -> execute(array('identifiantB'=> $identifiantBien));
+        $resultatReqDetailsBien = $reqDetailsBien->fetch();
+    
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,11 +50,11 @@
 
         <div class="pub-option">
             <div class="num-pub">
-                <p>Pub-121020232036</p>
+                <p> <?php echo $resultatReqDetailsBien['reference_bien'];?> </p>
 
                 <div class="pub-date-header">
                     <span><i class="fa-solid fa-clock"></i></span>
-                    <p>Il y'a 5 mois</p>
+                    <p><?php echo $resultatReqDetailsBien['date_time_bien'];?></p>
                 </div>
 
             </div>
@@ -80,22 +95,18 @@
         <div class="main-details-pub">
             <div class="all-picture-pub">
                 <div class="main-picture-pub">
+                    <?php
+                        $tabPhotoPub = $resultatReqDetailsBien['lien_photo1'];
+                        $tabPhotoPub = unserialize($tabPhotoPub);
 
-                    <img src="Images/location/location_villa1.jpg" class="main-img " alt="">
+                        for($i= 0;$i<count($tabPhotoPub);$i++) {
+                    ?>
 
-                    <img src="Images/location/villa8.jpg" class="main-img " alt="">
+                        <img src="<?php echo $tabPhotoPub[$i] ;?>" class="main-img " alt="">
 
-                    <img src="Images/location/villa7.jpg" class="main-img " alt="">
-
-                    <img src="Images/location/villa6.jpg" class="main-img " alt="">
-
-                    <img src="Images/location/villa5.jpg" class="main-img" alt="">
-
-                    <img src="Images/location/villa4.jpg" class="main-img " alt="">
-
-                    <img src="Images/location/villa3.jpeg" class="main-img " alt="">
-
-                    <img src="Images/location/villa2.png" class="main-img " alt="">
+                    <?php
+                        }
+                    ?>
 
 
                     <div class="bouton-next-prev">
@@ -108,37 +119,20 @@
 
                 <div class="picture-pub">
 
-                    <div class="picture">
-                        <img src="Images/location/location_villa1.jpg" class="side-picture" alt="">
-                    </div>
+                    <?php
 
-                    <div class="picture">
-                        <img src="Images/location/villa8.jpg" alt="" class="side-picture">
-                    </div>
+                        for($i= 0;$i<count($tabPhotoPub);$i++) {
+                    ?>
 
-                    <div class="picture">
-                        <img src="Images/location/villa7.jpg" alt="" class="side-picture">
-                    </div>
+                        <div class="picture">
+                            <img src="<?php echo $tabPhotoPub[$i] ;?>" class="side-picture" alt="">
+                        </div>
 
-                    <div class="picture">
-                        <img src="Images/location/villa6.jpg" alt="" class="side-picture">
-                    </div>
+                    <?php
+                        }
+                    ?>
 
-                    <div class="picture">
-                        <img src="Images/location/villa5.jpg" alt="" class="side-picture">
-                    </div>
-
-                    <div class="picture">
-                        <img src="Images/location/villa4.jpg" alt="" class="side-picture">
-                    </div>
-
-                    <div class="picture">
-                        <img src="Images/location/villa3.jpeg" alt="" class="side-picture">
-                    </div>
-
-                    <div class="picture">
-                        <img src="Images/location/villa2.png" alt="" class="side-picture">
-                    </div>
+                    
                     
                 </div>
             </div>
@@ -150,7 +144,7 @@
                 <div class="titre-caracteristiques">
 
                     <div class="titre">
-                        <h2>Maison à louer - 7 pieces</h2>
+                        <h2><?php echo ucfirst($resultatReqDetailsBien['titre_bien']) ;?></h2>
 
                     </div>
 
@@ -206,27 +200,35 @@
                 </div>
                 <div class="pub-prix-localisation">
                     <div class="pub-prix">
-                        <p>Loyer : 50.000 fr par mois</p>
+                        <?php
+                            if($resultatReqDetailsBien['location_vente'] == "location"){  
+                            ?>
+                                <p>Loyer : <?php echo number_format($resultatReqDetailsBien['prix_bien'],0,",",".");?> fr / mois</p>
+
+
+                            <?php
+                                }
+                                else{
+                                    ?>
+                                    <p>Prix : <?php echo number_format($resultatReqDetailsBien['prix_bien'],0,",",".");?> fr</p>
+
+
+                                <?php
+                                }
+                            ?>
 
                     </div>
                     <div class="pub-local">
-                        <p>Cameroun-Yaounde-Bastos</p>
+                        <p>
+                            <?php echo ucfirst($resultatReqDetailsBien['pays_bien']) . "-" . ucfirst($resultatReqDetailsBien['ville_bien']) ;?>
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="main-description">
                 <p>
-                    Dans l'agréable quartier d'Aiguelongue, villa F4 de 120m² sur un grand jardin arboré de 665m², terrasse, garage et parking.
-
-                    Vous disposez en rez-de-chaussée d'un séjour avec salle à manger, d'une cuisine aménagée, d'une buanderie, d'une première chambre, d'une salle d'eau et de toilettes séparées.
-                    Le premier étage se compose de deux chambres, d'une salle de bains et de toilettes séparés.
-
-                    Cette villa est équipée d'une cheminée insert, d'une climatisation réversible dans le séjour et la salle à manger et de chauffages individuels électriques dans la cuisine et les chambres.
-
-                    Contactez vite IMMOBIS 04.67.60.31.60
-
-                    Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques.
+                    <?php echo ucfirst($resultatReqDetailsBien['description_bien']) ;?>
                 </p>
             </div>
         </div>
@@ -239,3 +241,15 @@
     
 </body>
 </html>
+
+        
+
+
+    <?php 
+    
+    }
+
+    
+?>
+
+

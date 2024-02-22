@@ -84,7 +84,9 @@
 
 
             <div class="pub-location">
-                <a href="pub-location-details.php">
+                <a href="pub-location-details.php?identifiantBien=<?php
+                    echo $donneesBienLocation['id_Bien'] ;
+                ?>">
                     <!-- photo de couverture -->
                     <?php 
                         $tabPhotoPub = $donneesBienLocation['lien_photo1'] ;
