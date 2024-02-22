@@ -1,7 +1,7 @@
 <?php 
     // On définit le lien du logo pour cette page
 
-    $lienLogo ="../Images/logo2.png" ;
+    $lienLogo ="Images/logo2.png" ;
     $title = "MOT DE PASSE ADMINISTRATEUR OUBLIE ?";
 
 
@@ -17,22 +17,22 @@
     <link rel="stylesheet" href="style-admin/forgot-password-admin.css">
 
 
-    <link rel="stylesheet" href="../header-title/header-title.css">
+    <link rel="stylesheet" href="header-title/header-title.css">
 
 
 
         <!-- Feuille de style des icones-->
-        <link rel="stylesheet" href="../Icons/css/all.css">
+        <link rel="stylesheet" href="Icons/css/all.css">
 
        
 
 
         <!-- Feuille de style du dossier footer-->
-        <link rel="stylesheet" href="../footer/style/footer.css">
+        <link rel="stylesheet" href="footer/style/footer.css">
 </head>
 <body>
     <?php 
-        include("../header-title/header-title.php");
+        include("header-title/header-title.php");
 
     ?>
 
@@ -67,7 +67,7 @@
 
     <!-- On inclut le pieds de page -->
 
-    <?php include('../footer/footer.php') ; ?>
+    <?php include('footer/footer.php') ; ?>
 
 
 

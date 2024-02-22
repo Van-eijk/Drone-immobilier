@@ -8,4 +8,4 @@
 
     // suppression des cookies
 
-    header("location:index.php");
+    header("location:logadmin.php");

@@ -2,7 +2,7 @@
     //session_start();
     // On définit le lien du logo pour cette page
 
-    $lienLogo ="../Images/logo2.png" ;
+    $lienLogo ="Images/logo2.png" ;
     $title = "ADMINISTRATEUR";
 
 
@@ -14,18 +14,19 @@
 
     // On inclut le fichier qui contient les informations de connexion à la base de données
 
-    $lienFichierBDD = "../database/config.php" ;
+    $lienFichierBDD = "database/config.php" ;
      include($lienFichierBDD);
  
     // On inclut la classe la classe Admin
  
-    include("../class/Admin.php");
+    include("class/Admin.php");
 
 
     $erreurPassword;
 
 
     if(isset($_POST["logAdmin"])){
+        //echo"bjr les zeros";
 
         if(!empty($_POST["emailFormContact"])){
 
@@ -35,7 +36,7 @@
 
                 $conAdmin = new Admin(); // On instencie la classe Admin                
 
-                $redirectionPageMembre = "Location:../index.php";
+                $redirectionPageMembre = "Location:index.php";
                 $redirectionPageAdmin = "Location:dashboard-admin.php" ;
                 $lienPageConnexion = "index.php";
 
@@ -83,23 +84,23 @@
     <link rel="stylesheet" href="style-admin/index-admin.css">
 
 
-    <link rel="stylesheet" href="../header-title/header-title.css">
+    <link rel="stylesheet" href="header-title/header-title.css">
 
 
 
         <!-- Feuille de style des icones-->
-        <link rel="stylesheet" href="../Icons/css/all.css">
+        <link rel="stylesheet" href="Icons/css/all.css">
 
 
 
         <!-- Feuille de style du dossier footer-->
-        <link rel="stylesheet" href="../footer/style/footer.css">
+        <link rel="stylesheet" href="footer/style/footer.css">
 </head>
 
 
 <body>
     <?php 
-        include("../header-title/header-title.php");
+        include("header-title/header-title.php");
 
         //include("loginAdmin.php");
 
@@ -110,7 +111,7 @@
     <div class="main-content-contact">
         <div class="main-form-contact">
 
-            <form action="index.php" method="post">
+            <form action="logadmin.php" method="post">
 
                 <div class="email-form-contact">
                     <span><i class="fa-solid fa-envelope"></i></span>
@@ -148,7 +149,7 @@
 
     <!-- On inclut le pieds de page -->
 
-    <?php include('../footer/footer.php') ; ?>
+    <?php include('footer/footer.php') ; ?>
 
 
 

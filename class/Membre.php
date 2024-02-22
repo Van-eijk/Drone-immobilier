@@ -96,7 +96,7 @@
         }
 
         public function connexionEspaceMembre($lienFichierBDD, $lienPageConnexion, $redirectionPageAdmin, $redirectionPageMembre, $email, $passwordHache) {
-
+            echo" bjr les zero";
 
             include($lienFichierBDD); // On inclut le lien du fichier de la base de données
 

@@ -1,8 +1,8 @@
 <?php 
     session_start(); // on démarre le système de session
 
-    include('../../database/config.php'); // on inclut la base de données
-    include('../../class/Admin.php');
+    include('database/config.php'); // on inclut la base de données
+    include('class/Admin.php');
 
 
     // on instencie la class Admin afin d'uploader les fichiers
@@ -10,11 +10,11 @@
     $userAdmin = new Admin() ;
     
 
-    $cheminPhotoDefaut="../../Images/logo.jpg";
+    $cheminPhotoDefaut="Images/logo.jpg";
     $categorieBien = "";
     
    
-    $dossierSauvegarde = "../../ImagesSauv/";
+    $dossierSauvegarde = "ImagesSauv/";
 
 
 ?>
@@ -142,7 +142,7 @@
                                                                                 ));
 
 
-                                                                                header("Location:../dashboard-admin.php");
+                                                                                header("Location:dashboard-admin.php");
 
 
 
@@ -226,7 +226,7 @@
                                                             $reqChambre2 -> closeCursor();
 
 
-                                                            header("Location:../dashboard-admin.php");
+                                                            header("Location:dashboard-admin.php");
 
                                                            
 
@@ -303,7 +303,7 @@
                                                             $reqMagasin2 -> closeCursor();
 
 
-                                                            header("Location:../dashboard-admin.php");
+                                                            header("Location:dashboard-admin.php");
 
                                                         
 
@@ -375,7 +375,7 @@
                                                             $reqImmeuble2 -> closeCursor();
 
 
-                                                            header("Location:../dashboard-admin.php");
+                                                            header("Location:dashboard-admin.php");
 
                                                         
 
@@ -443,7 +443,7 @@
                                                         $reqTerrain2 -> closeCursor();
 
 
-                                                        header("Location:../dashboard-admin.php");
+                                                        header("Location:dashboard-admin.php");
 
                                                         
 

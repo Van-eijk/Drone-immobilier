@@ -3,7 +3,7 @@
 <?php 
     // On définit le lien du logo pour cette page
 
-    $lienLogo ="../Images/logo2.png" ;
+    $lienLogo ="Images/logo2.png" ;
     $username = "Username";
     $lienAccueil = "dashboard-admin.php";
     $lienDeconnection = "log-out-admin.php";
@@ -31,12 +31,13 @@
                 <link rel="stylesheet" href="header-menu-admin/header-menu-admin.css">
 
                 <!-- Feuille de style des icones-->
-                <link rel="stylesheet" href="../Icons/css/all.css">
+                <link rel="stylesheet" href="Icons/css/all.css">
             </head>
             <body>
                 <?php include "header-menu-admin/header-menu-admin.php";?>
+
                 <div class="admin-content">
-                    <a href="option-admin/ajout-bien.php" class="content-item" id="addPub" title="Ajouter un bien">
+                    <a href="ajout-bien.php" class="content-item" id="addPub" title="Ajouter un bien">
                         <span><i class="fa-solid fa-bullhorn"></i></span>
                         <p>Ajouter bien</p>
                     

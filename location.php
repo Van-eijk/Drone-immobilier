@@ -66,7 +66,7 @@
 
         <!-- c'est ici que tout commence -->
         <?php 
-            $reqSelectBienLocation = $connexionDataBase ->prepare('SELECT * FROM bien WHERE location_vente = :locaVente');
+            $reqSelectBienLocation = $connexionDataBase ->prepare('SELECT * FROM bien WHERE location_vente = :locaVente ORDER BY id_Bien DESC');
 
             $reqSelectBienLocation -> execute(array(
                 'locaVente'=> $locaVente
@@ -85,7 +85,14 @@
 
             <div class="pub-location">
                 <a href="pub-location-details.php">
-                        <img src="images/location/location_villa1.jpg" alt="location_villa1">
+                    <!-- photo de couverture -->
+                    <?php 
+                        $tabPhotoPub = $donneesBienLocation['lien_photo1'] ;
+                        $tabPhotoPub = unserialize($tabPhotoPub) ;
+                        //echo $tabPhotoPub[0];
+
+                    ?>
+                        <img src="<?php echo $tabPhotoPub[0]; ?>" alt="location_villa1">
                         <div class="pub-location-information">
                             <div class="pub-titre-localite">
 
