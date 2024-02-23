@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 16 déc. 2023 à 11:52
--- Version du serveur : 8.0.31
--- Version de PHP : 8.0.26
+-- Généré le : ven. 23 fév. 2024 à 16:00
+-- Version du serveur : 8.2.0
+-- Version de PHP : 8.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -57,36 +57,29 @@ CREATE TABLE IF NOT EXISTS `bien` (
   `reference_bien` varchar(150) NOT NULL,
   `titre_bien` varchar(250) NOT NULL,
   `description_bien` text NOT NULL,
+  `parking` int NOT NULL DEFAULT '0',
   `location_vente` enum('location','vente') DEFAULT 'location',
   `prix_bien` float NOT NULL,
   `pays_bien` varchar(250) NOT NULL,
   `ville_bien` varchar(250) NOT NULL,
+  `quartier_bien` varchar(150) NOT NULL,
+  `telephone_proprietaire` varchar(25) NOT NULL,
   `date_time_bien` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `lien_photo1` varchar(255) DEFAULT NULL,
-  `lien_photo2` varchar(255) DEFAULT NULL,
-  `lien_photo3` varchar(255) DEFAULT NULL,
-  `lien_photo4` varchar(255) DEFAULT NULL,
-  `lien_photo5` varchar(255) DEFAULT NULL,
-  `lien_photo6` varchar(255) DEFAULT NULL,
-  `lien_photo7` varchar(255) DEFAULT NULL,
-  `lien_photo8` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_Bien`),
   KEY `fk_bien` (`id_adminFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `bien`
 --
 
-INSERT INTO `bien` (`id_Bien`, `id_adminFK`, `reference_bien`, `titre_bien`, `description_bien`, `location_vente`, `prix_bien`, `pays_bien`, `ville_bien`, `date_time_bien`, `lien_photo1`, `lien_photo2`, `lien_photo3`, `lien_photo4`, `lien_photo5`, `lien_photo6`, `lien_photo7`, `lien_photo8`) VALUES
-(1, 2, 'bien051120231216', 'terrain à vendre 500 m²', 'terrain terrassé situé au centre ville', 'vente', 500000, 'cameroun', 'Yaounde', '2023-11-06 15:59:00', 'lien photo terrain', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 1, 'bien051120231222', 'Bureau à louer', 'Bureau situé au centre ville', 'location', 50000, 'cameroun', 'Douala', '2023-11-06 15:59:00', 'lien photo bureau', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 2, 'bien051120231225', 'immeuble à vendre ', 'immeuble situé au centre ville', 'vente', 1500000, 'cameroun', 'Bafoussam', '2023-11-06 15:59:00', 'lien photo immeuble', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 2, 'bien051120231229', 'chambre à louer 50 m²', 'chambre situé au centre ville', 'location', 25000, 'cameroun', 'Douala', '2023-11-06 15:59:00', 'lien photo chambre', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 1, 'bien051120231230', 'studio à louer', 'studio situé au centre ville', 'location', 50000, 'cameroun', 'Maroua', '2023-11-06 15:59:00', 'lien photo studio', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 1, 'bien051120231230', 'appartement à louer', 'appartement situé au centre ville', 'location', 70000, 'cameroun', 'Ebolowa', '2023-11-06 15:59:00', 'lien photo appartement', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, 2, 'bien051120231237', 'maison à vendre', 'maison situé au centre ville', 'vente', 1800000, 'cameroun', 'Obala', '2023-11-06 15:59:00', 'lien photo maison', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, 1, 'bien051120231236', 'Villa à vendre', 'Villa situé au centre ville', 'vente', 1700000, 'cameroun', 'Obala', '2023-11-06 15:59:00', 'lien photo villa', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `bien` (`id_Bien`, `id_adminFK`, `reference_bien`, `titre_bien`, `description_bien`, `parking`, `location_vente`, `prix_bien`, `pays_bien`, `ville_bien`, `quartier_bien`, `telephone_proprietaire`, `date_time_bien`, `lien_photo1`) VALUES
+(30, 1, 'Chambre220224083910', 'chambre moderne à louer', 'chambre moderne à louer situé au centre ville de montreal\r\n                                ', 0, 'location', 30000, 'Canada', 'montreal', '', '', '2024-02-22 08:39:10', 'a:3:{i:0;s:49:\"ImagesSauv/chambre moderne à louer220224083910_1\";i:1;s:49:\"ImagesSauv/chambre moderne à louer220224083910_2\";i:2;s:49:\"ImagesSauv/chambre moderne à louer220224083910_3\";}'),
+(31, 1, 'Terrain220224084215', 'Terrain à vendre', '\r\n   terrain à vendre bon prix                             ', 0, 'vente', 1500000, 'Cameroun', 'Maroua', '', '', '2024-02-22 08:42:15', 'a:2:{i:0;s:42:\"ImagesSauv/Terrain à vendre220224084215_1\";i:1;s:42:\"ImagesSauv/Terrain à vendre220224084215_2\";}'),
+(32, 1, 'Villa220224013034', 'Villa de luxe à vendre', 'Grande villa luxueuse située en plein centre ville dans un quartier résidentiel\r\n                                ', 0, 'vente', 5000000, 'Cameroun', 'Yaounde', '', '', '2024-02-22 13:30:34', 'a:3:{i:0;s:48:\"ImagesSauv/Villa de luxe à vendre220224013034_1\";i:1;s:48:\"ImagesSauv/Villa de luxe à vendre220224013034_2\";i:2;s:48:\"ImagesSauv/Villa de luxe à vendre220224013034_3\";}'),
+(33, 1, 'Studio230224104132', '', '\r\n                                ', 0, 'location', 0, '', '', '', '', '2024-02-23 10:41:32', 'a:1:{i:0;s:25:\"ImagesSauv/230224104132_1\";}'),
+(34, 1, 'Chambre230224015043', 'Chambre simple à louer', 'Chambre simple à louer dans un quartier residentiel calme et sécurisé\r\n                                ', 1, 'location', 20000, 'Cameroun', 'Yaounde', 'Messassi', '653695347', '2024-02-23 13:50:43', 'a:3:{i:0;s:48:\"ImagesSauv/Chambre simple à louer230224015043_1\";i:1;s:48:\"ImagesSauv/Chambre simple à louer230224015043_2\";i:2;s:48:\"ImagesSauv/Chambre simple à louer230224015043_3\";}');
 
 -- --------------------------------------------------------
 
@@ -102,14 +95,15 @@ CREATE TABLE IF NOT EXISTS `chambre` (
   `moderne_chambre` enum('OUI','NON') DEFAULT 'OUI',
   PRIMARY KEY (`id_chambre`),
   KEY `fk_chambre` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `chambre`
 --
 
 INSERT INTO `chambre` (`id_chambre`, `id_bienFK`, `superficie_chambre`, `moderne_chambre`) VALUES
-(1, 4, 40, 'OUI');
+(1, 30, 100, 'OUI'),
+(2, 34, 100, 'NON');
 
 -- --------------------------------------------------------
 
@@ -126,16 +120,7 @@ CREATE TABLE IF NOT EXISTS `favoris` (
   PRIMARY KEY (`id_favoris`),
   KEY `fk_favoris_bien` (`id_bienFK`),
   KEY `fk_favoris_membre` (`id_membreFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
-
---
--- Déchargement des données de la table `favoris`
---
-
-INSERT INTO `favoris` (`id_favoris`, `id_bienFK`, `id_membreFK`, `date_time_favoris`) VALUES
-(1, 8, 4, '2023-11-09 04:42:11'),
-(2, 6, 3, '2023-11-09 04:42:11'),
-(3, 1, 4, '2023-11-09 04:42:11');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -151,14 +136,7 @@ CREATE TABLE IF NOT EXISTS `immeuble` (
   `nbre_etage` int NOT NULL,
   PRIMARY KEY (`id_immeuble`),
   KEY `fk_immeuble` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
-
---
--- Déchargement des données de la table `immeuble`
---
-
-INSERT INTO `immeuble` (`id_immeuble`, `id_bienFK`, `superficie_terrain_immeuble`, `nbre_etage`) VALUES
-(1, 3, 1000, 5);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -174,14 +152,7 @@ CREATE TABLE IF NOT EXISTS `magasin` (
   `nombre_piece_magasin` int NOT NULL,
   PRIMARY KEY (`id_magasin`),
   KEY `fk_magasin` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
-
---
--- Déchargement des données de la table `magasin`
---
-
-INSERT INTO `magasin` (`id_magasin`, `id_bienFK`, `superficie_magasin`, `nombre_piece_magasin`) VALUES
-(1, 2, 80, 2);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -202,18 +173,15 @@ CREATE TABLE IF NOT EXISTS `maison` (
   `superficie_terrain` float DEFAULT '0',
   PRIMARY KEY (`id_maison`),
   KEY `fk_maison` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `maison`
 --
 
 INSERT INTO `maison` (`id_maison`, `id_bienFK`, `nbre_piece`, `nbre_chambre`, `nbre_cuisine`, `nbre_salon`, `nbre_douche`, `type_maison`, `superficie_terrain`) VALUES
-(1, 5, 3, 1, 1, 1, 1, 'studio', 50),
-(2, 6, 3, 1, 1, 1, 1, 'appartement', 150),
-(3, 7, 3, 1, 1, 1, 1, 'maison', 500),
-(4, 8, 3, 1, 1, 1, 1, 'villa', 5000),
-(5, 7, 3, 1, 1, 1, 1, 'maison', 500);
+(1, 32, 5, 10, 3, 3, 11, 'villa', 3000),
+(2, 33, 0, 0, 0, 0, 0, 'studio', 0);
 
 -- --------------------------------------------------------
 
@@ -296,7 +264,7 @@ CREATE TABLE IF NOT EXISTS `terrain` (
 --
 
 INSERT INTO `terrain` (`id_terrain`, `id_bienFK`, `superficie_terrain`) VALUES
-(1, 1, 500);
+(1, 31, 2000);
 
 -- --------------------------------------------------------
 

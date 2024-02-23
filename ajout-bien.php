@@ -81,7 +81,7 @@
                                 <select name="locationVente" id="locationVente">
                                     <option value="">Type de contrat</option>
 
-                                    <option value="location">Location</option>
+                                    <option value="location" >Location</option>
                                     <option value="vente">Vente</option>
 
                                 </select>
@@ -89,7 +89,7 @@
 
                             <div class="titre-bien">
                                 <span> <i class="fa-solid fa-pen-to-square"></i></span>
-                                <input type="text" placeholder="Ajouter un titre" name="titreBien" >
+                                <input type="text" placeholder="Ajouter un titre" name="titreBien">
                             </div>
                             <div class="pays-bien">
                                 <span><i class="fa-solid fa-earth-americas"></i></span>
@@ -101,9 +101,24 @@
                                 <input type="text" placeholder="Ville" name="villeBien">
                             </div>
 
+                            <div class="ville-bien">
+                                <span><i class="fa-solid fa-tree-city"></i></span>
+                                <input type="text" placeholder="Quartier" name="quartierBien">
+                            </div>
+
+                            <div class="ville-bien">
+                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                <input type="number" placeholder="Parking" name="parkingBien">
+                            </div>
+
                             <div class="prix-bien">
                                 <span><i class="fa-solid fa-sack-dollar"></i></span>
                                 <input type="number" placeholder="Prix" name="prixBien">
+                            </div>
+
+                            <div class="ville-bien">
+                                <span><i class="fa-solid fa-phone"></i></span>
+                                <input type="number" placeholder="Telephone proprietaire" name="telephoneProprietaire">
                             </div>
 
                             <div class="description-bien">

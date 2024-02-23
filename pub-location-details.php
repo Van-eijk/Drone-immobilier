@@ -220,7 +220,7 @@
                     </div>
                     <div class="pub-local">
                         <p>
-                            <?php echo ucfirst($resultatReqDetailsBien['pays_bien']) . "-" . ucfirst($resultatReqDetailsBien['ville_bien']) ;?>
+                            <?php echo ucfirst($resultatReqDetailsBien['pays_bien']) . "-" . ucfirst($resultatReqDetailsBien['ville_bien']) . "-" . ucfirst($resultatReqDetailsBien['quartier_bien']) ;?>
                         </p>
                     </div>
                 </div>
