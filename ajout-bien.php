@@ -189,6 +189,15 @@
                                         <option value="Non">Non moderne</option>
                                     </select>
                                 </div>
+
+                                <div class="moderne-chambre">
+                                    <select name="cuisineChambre" id="">
+                                        <option value="">Cuisine ?</option>
+                                        <option value="Oui">Oui</option>
+                                        <option value="Non">Non </option>
+                                    </select>
+                                </div>
+
                                 <div class="superficie-chambre">
                                     <span><i class="fa-regular fa-square"></i></span>
                                     <input type="number" placeholder="superficie de la chambre" name="superficieChambre">

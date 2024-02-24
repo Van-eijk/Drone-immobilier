@@ -176,10 +176,11 @@
                                                             if($categorieBien == "chambre"){
                                                                 if(isset($_POST['moderneChambre'])){
                                                                     if(isset($_POST['superficieChambre'])){
-            
-            
-                                                                        $referenceBien = "Chambre" . $date ;
+                                                                        if(isset($_POST['cuisineChambre'])){
+
+                                                                            $referenceBien = "Chambre" . $date ;
                                                                         $modChambre = $_POST['moderneChambre'];
+                                                                        $cuisineChambre = $_POST['cuisineChambre'];
                                                                         $superChambre = $_POST['superficieChambre'];
             
             
@@ -222,29 +223,27 @@
                                                                         
             
             
-                                                                        $reqChambre2 = $connexionDataBase -> prepare('INSERT INTO chambre(id_bienFK, superficie_chambre, moderne_chambre) VALUES(:idBienFK, :superficieChambre, :moderneChambre)');
+                                                                        $reqChambre2 = $connexionDataBase -> prepare('INSERT INTO chambre(id_bienFK, superficie_chambre, moderne_chambre, cuisine_chambre) VALUES(:idBienFK, :superficieChambre, :moderneChambre, :cuisineChambre)');
                                                                         $reqChambre2 -> execute(array(
                                                                             'idBienFK' =>  $resultatIdBienChambre, 
                                                                             'superficieChambre' => $superChambre , 
-                                                                            'moderneChambre' =>   $modChambre
+                                                                            'moderneChambre' =>   $modChambre,
+                                                                            'cuisineChambre' =>   $cuisineChambre
                                                                         ));
                                                                         $reqChambre2 -> closeCursor();
             
             
                                                                         header("Location:dashboard-admin.php");
             
-                                                                       
+                                                                    
             
             
+                                                                        /**************** fin */    
+
+                                                                        }
             
             
-            
-            
-            
-            
-            
-            
-                                                                        /**************** fin */                                                            
+                                                                                                                                
                                                                     
                                                                     }
                     

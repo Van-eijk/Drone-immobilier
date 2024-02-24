@@ -19,6 +19,8 @@
         $reqDetailsBien = $connexionDataBase ->prepare('SELECT * FROM bien WHERE id_Bien = :identifiantB');
         $reqDetailsBien -> execute(array('identifiantB'=> $identifiantBien));
         $resultatReqDetailsBien = $reqDetailsBien->fetch();
+
+        if(!empty($resultatReqDetailsBien)){
     
     ?>
 
@@ -171,28 +173,41 @@
                         <div class="caracteristique">
                             <div class="surface-terrain">
                                 <span><i class="fa-solid fa-chart-area"></i></span>
-                                <p>1000 m²</p>
+                                <p> <?php echo $resultatReqCaractChambre['superficie_chambre'] . " " . "m²"; ?> </p>
                             </div>
 
-                            <div class="nbre-etage">
-                                <span><i class="fa-solid fa-building"></i></span>
-                                <p>5 Niveaux</p>
-                            </div>
+                            
+                            <?php
+                                if($resultatReqDetailsBien['parking'] > 0){ ?>
 
-                            <div class="nbre-parking">
-                                <span><i class="fa-solid fa-square-parking"></i></span>
-                                <p>1 Parking</p>
-                            </div>
+                                <div class="nbre-parking">
+                                    <span><i class="fa-solid fa-square-parking"></i></span>
+                                    <p><?php echo $resultatReqDetailsBien['parking']. " " . "Parking"; ?> </p>
+                                </div>
 
-                            <div class="nbre-salon">
-                                <span><i class="fa-solid fa-couch"></i></span>
-                                <p>1 Salon</p>
-                            </div>
 
-                            <div class="nbre-cuisine">
-                                <span><i class="fa-solid fa-kitchen-set"></i></span>
-                                <p>1 Cuisine</p>
-                            </div>
+
+                            <?php
+                                }
+                            ?>
+                           
+
+                            
+                            <?php
+                                if($resultatReqCaractChambre['cuisine_chambre'] == "OUI"){ ?>
+
+                                <div class="nbre-cuisine">
+                                    <span><i class="fa-solid fa-kitchen-set"></i></span>
+                                    <p>1 Cuisine</p>
+                                </div>
+
+
+
+                            <?php
+                                }
+                            ?>
+
+                            
 
                             <div class="nbre-chambre">
                                 <span><i class="fa-solid fa-bed"></i></span>
@@ -201,19 +216,20 @@
 
 
 
-                            <div class="nbre-douche">
-                                <span><i class="fa-solid fa-shower"></i></span>
-                                <p>1 Douche</p>
-                            </div>
+                            <?php
+                                if($resultatReqCaractChambre['moderne_chambre'] == "OUI"){ ?>
 
-                        
+                                <div class="nbre-douche">
+                                    <span><i class="fa-solid fa-shower"></i></span>
+                                    <p>1 Douche</p>
+                                </div>
 
-                            <div class="nbre-autre-piece">
-                                <span><i class="fa-regular fa-square"></i></span>
-                                <p>1 Autres pieces</p>
-                            </div>
 
-                       
+
+                            <?php
+                                }
+                            ?>
+
 
                         </div>
 
@@ -243,46 +259,108 @@
                         <div class="caracteristique">
                             <div class="surface-terrain">
                                 <span><i class="fa-solid fa-chart-area"></i></span>
-                                <p>1000 m²</p>
-                            </div>
-
-                            <div class="nbre-etage">
-                                <span><i class="fa-solid fa-building"></i></span>
-                                <p>5 Niveaux</p>
+                                <p><?php echo $resultatReqCaractMaison['superficie_terrain'] . " " . "m²"; ?></p>
                             </div>
 
                             <div class="nbre-parking">
-                                <span><i class="fa-solid fa-square-parking"></i></span>
-                                <p>1 Parking</p>
+                                
+                                <?php
+                                    if($resultatReqDetailsBien['parking'] > 0){ ?>
+
+                                        <div class="nbre-parking">
+                                            <span><i class="fa-solid fa-square-parking"></i></span>
+                                            <p><?php echo $resultatReqDetailsBien['parking']. " " . "Parking"; ?> </p>
+                                        </div>
+
+                                <?php
+                                    }
+                                ?>
                             </div>
 
                             <div class="nbre-salon">
                                 <span><i class="fa-solid fa-couch"></i></span>
-                                <p>1 Salon</p>
+                                <?php
+                                    if($resultatReqCaractMaison['nbre_cuisine'] > 1){
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_salon'] . " " . "Salons"; ?></p>
+                                    <?php
+                                    }else{
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_salon'] . " " . "Salon"; ?></p>
+                                    <?php
+                                    }
+                                ?>
                             </div>
 
                             <div class="nbre-cuisine">
                                 <span><i class="fa-solid fa-kitchen-set"></i></span>
-                                <p>1 Cuisine</p>
+                                <?php
+                                    if($resultatReqCaractMaison['nbre_cuisine'] > 1){
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_cuisine'] . " " . "Cuisines"; ?></p>
+                                    <?php
+                                    }else{
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_cuisine'] . " " . "Cuisine"; ?></p>
+                                    <?php
+                                    }
+                                ?>
                             </div>
 
                             <div class="nbre-chambre">
                                 <span><i class="fa-solid fa-bed"></i></span>
-                                <p>1 Chambre</p>
+                                <?php
+                                    if($resultatReqCaractMaison['nbre_chambre'] > 1){
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_chambre'] . " " . "Chambres"; ?></p>
+                                    <?php
+                                    }else{
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_chambre'] . " " . "Chambre"; ?></p>
+                                    <?php
+                                    }
+                                ?>
                             </div>
 
 
 
                             <div class="nbre-douche">
                                 <span><i class="fa-solid fa-shower"></i></span>
-                                <p>1 Douche</p>
+                                <?php
+                                    if($resultatReqCaractMaison['nbre_douche'] > 1){
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_douche'] . " " . "Douches"; ?></p>
+                                    <?php
+                                    }else{
+                                        ?>
+                                        <p><?php echo $resultatReqCaractMaison['nbre_douche'] . " " . "Douche"; ?></p>
+                                    <?php
+                                    }
+                                ?>
+                                
                             </div>
 
                         
 
                             <div class="nbre-autre-piece">
                                 <span><i class="fa-regular fa-square"></i></span>
-                                <p>1 Autres pieces</p>
+                                <?php
+                                    if($resultatReqCaractMaison["nbre_piece"] > 0){
+
+                                        if($resultatReqCaractMaison['nbre_piece'] > 1){
+                                            ?>
+                                            <p><?php echo $resultatReqCaractMaison['nbre_piece'] . " " . "Autres pieces"; ?></p>
+                                        <?php
+                                        }else{
+                                            ?>
+                                            <p><?php echo $resultatReqCaractMaison['nbre_piece'] . " " . "Autre piece"; ?></p>
+                                        <?php
+                                        }
+
+                                    }
+                                
+                                   
+                                ?>
                             </div>
 
                        
@@ -319,47 +397,33 @@
                         <div class="caracteristique">
                             <div class="surface-terrain">
                                 <span><i class="fa-solid fa-chart-area"></i></span>
-                                <p>1000 m²</p>
+                                <p><?php echo $resultatReqCaractImmeuble['superficie_terrain_immeuble'] . " " . "m²"; ?></p>
                             </div>
 
                             <div class="nbre-etage">
                                 <span><i class="fa-solid fa-building"></i></span>
-                                <p>5 Niveaux</p>
+                                <p><?php echo $resultatReqCaractImmeuble['nbre_etage'] . " " . "Niveaux"; ?></p>
                             </div>
 
                             <div class="nbre-parking">
                                 <span><i class="fa-solid fa-square-parking"></i></span>
-                                <p>1 Parking</p>
+
+                                <?php
+                                    if($resultatReqDetailsBien['parking'] > 0){ ?>
+
+                                        <div class="nbre-parking">
+                                            <span><i class="fa-solid fa-square-parking"></i></span>
+                                            <p><?php echo $resultatReqDetailsBien['parking']. " " . "Parking"; ?> </p>
+                                        </div>
+
+                                <?php
+                                    }
+                                ?>
+
+                                
                             </div>
 
-                            <div class="nbre-salon">
-                                <span><i class="fa-solid fa-couch"></i></span>
-                                <p>1 Salon</p>
-                            </div>
-
-                            <div class="nbre-cuisine">
-                                <span><i class="fa-solid fa-kitchen-set"></i></span>
-                                <p>1 Cuisine</p>
-                            </div>
-
-                            <div class="nbre-chambre">
-                                <span><i class="fa-solid fa-bed"></i></span>
-                                <p>1 Chambre</p>
-                            </div>
-
-
-
-                            <div class="nbre-douche">
-                                <span><i class="fa-solid fa-shower"></i></span>
-                                <p>1 Douche</p>
-                            </div>
-
-                        
-
-                            <div class="nbre-autre-piece">
-                                <span><i class="fa-regular fa-square"></i></span>
-                                <p>1 Autres pieces</p>
-                            </div>
+                           
 
                        
 
@@ -392,46 +456,48 @@
                         <div class="caracteristique">
                             <div class="surface-terrain">
                                 <span><i class="fa-solid fa-chart-area"></i></span>
-                                <p>1000 m²</p>
+                                <p><?php echo $resultatReqDetailsBien['superficie_magasin']. " " . "m²"; ?> </p>
                             </div>
 
-                            <div class="nbre-etage">
-                                <span><i class="fa-solid fa-building"></i></span>
-                                <p>5 Niveaux</p>
-                            </div>
+                            
 
                             <div class="nbre-parking">
                                 <span><i class="fa-solid fa-square-parking"></i></span>
-                                <p>1 Parking</p>
+
+                                <?php
+                                    if($resultatReqDetailsBien['parking'] > 0){ ?>
+
+                                        <div class="nbre-parking">
+                                            <span><i class="fa-solid fa-square-parking"></i></span>
+                                            <p><?php echo $resultatReqDetailsBien['parking']. " " . "Parking"; ?> </p>
+                                        </div>
+
+                                <?php
+                                    }
+                                ?>
+                                
                             </div>
 
-                            <div class="nbre-salon">
-                                <span><i class="fa-solid fa-couch"></i></span>
-                                <p>1 Salon</p>
-                            </div>
-
-                            <div class="nbre-cuisine">
-                                <span><i class="fa-solid fa-kitchen-set"></i></span>
-                                <p>1 Cuisine</p>
-                            </div>
-
-                            <div class="nbre-chambre">
-                                <span><i class="fa-solid fa-bed"></i></span>
-                                <p>1 Chambre</p>
-                            </div>
-
-
-
-                            <div class="nbre-douche">
-                                <span><i class="fa-solid fa-shower"></i></span>
-                                <p>1 Douche</p>
-                            </div>
+                            
 
                         
 
                             <div class="nbre-autre-piece">
                                 <span><i class="fa-regular fa-square"></i></span>
-                                <p>1 Autres pieces</p>
+
+                                <?php
+                                    if($resultatReqDetailsBien["nombre_piece_magasin"] > 1){
+                                ?>
+                                    <p><?php echo $resultatReqDetailsBien['nombre_piece_magasin']. " " . "Pieces"; ?> </p>
+                                <?php
+                                    }
+                                    else{
+                                        ?>
+                                        <p><?php echo $resultatReqDetailsBien['nombre_piece_magasin']. " " . "Piece"; ?> </p>
+
+                                    <?php
+                                    }
+                                ?>
                             </div>
 
                        
@@ -466,48 +532,8 @@
                         <div class="caracteristique">
                             <div class="surface-terrain">
                                 <span><i class="fa-solid fa-chart-area"></i></span>
-                                <p>1000 m²</p>
+                                <p><?php echo $resultatReqCaractTerrain['superficie_terrain']. " " . "m²"; ?> </p>
                             </div>
-
-                            <div class="nbre-etage">
-                                <span><i class="fa-solid fa-building"></i></span>
-                                <p>5 Niveaux</p>
-                            </div>
-
-                            <div class="nbre-parking">
-                                <span><i class="fa-solid fa-square-parking"></i></span>
-                                <p>1 Parking</p>
-                            </div>
-
-                            <div class="nbre-salon">
-                                <span><i class="fa-solid fa-couch"></i></span>
-                                <p>1 Salon</p>
-                            </div>
-
-                            <div class="nbre-cuisine">
-                                <span><i class="fa-solid fa-kitchen-set"></i></span>
-                                <p>1 Cuisine</p>
-                            </div>
-
-                            <div class="nbre-chambre">
-                                <span><i class="fa-solid fa-bed"></i></span>
-                                <p>1 Chambre</p>
-                            </div>
-
-
-
-                            <div class="nbre-douche">
-                                <span><i class="fa-solid fa-shower"></i></span>
-                                <p>1 Douche</p>
-                            </div>
-
-                        
-
-                            <div class="nbre-autre-piece">
-                                <span><i class="fa-regular fa-square"></i></span>
-                                <p>1 Autres pieces</p>
-                            </div>
-
                        
 
                         </div>
@@ -578,6 +604,13 @@
     <?php 
     
     }
+    else{
+        echo "Une erreur s'est produite : Article innexistant !";
+    }
+}
+else{
+    echo "Une erreur s'est produite dans le lien";
+}
 
     
 ?>
