@@ -148,54 +148,384 @@
 
                     </div>
 
-                    <div class="caracteristique">
-                        <div class="surface-terrain">
-                            <span><i class="fa-solid fa-chart-area"></i></span>
-                            <p>1000 m²</p>
-                        </div>
+                    <!--  Commencons le tri des donnees  -->
 
-                        <div class="nbre-etage">
-                            <span><i class="fa-solid fa-building"></i></span>
-                            <p>5 Niveaux</p>
-                        </div>
+                    <?php
 
-                        <div class="nbre-parking">
-                            <span><i class="fa-solid fa-square-parking"></i></span>
-                            <p>1 Parking</p>
-                        </div>
+                        // On verifie si le bien se trouve dans la table chambre
 
-                        <div class="nbre-salon">
-                            <span><i class="fa-solid fa-couch"></i></span>
-                            <p>1 Salon</p>
-                        </div>
+                        $reqCaractSpecifique = $connexionDataBase -> prepare('SELECT * FROM chambre WHERE id_bienFK = :idBienFK');
+                        $reqCaractSpecifique -> execute(array(
+                            'idBienFK'=> $identifiantBien
+                        ));
 
-                        <div class="nbre-cuisine">
-                            <span><i class="fa-solid fa-kitchen-set"></i></span>
-                            <p>1 Cuisine</p>
-                        </div>
+                    
 
-                        <div class="nbre-chambre">
-                            <span><i class="fa-solid fa-bed"></i></span>
-                            <p>1 Chambre</p>
-                        </div>
+                        $resultatReqCaractChambre = $reqCaractSpecifique -> fetch();
+
+                        if(!empty($resultatReqCaractChambre)) {
+                    ?>
+
+                        <!-- Au cas où on a trouvé un resultat, on affiche les caracterisques de la chambre -->
+
+                        <div class="caracteristique">
+                            <div class="surface-terrain">
+                                <span><i class="fa-solid fa-chart-area"></i></span>
+                                <p>1000 m²</p>
+                            </div>
+
+                            <div class="nbre-etage">
+                                <span><i class="fa-solid fa-building"></i></span>
+                                <p>5 Niveaux</p>
+                            </div>
+
+                            <div class="nbre-parking">
+                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                <p>1 Parking</p>
+                            </div>
+
+                            <div class="nbre-salon">
+                                <span><i class="fa-solid fa-couch"></i></span>
+                                <p>1 Salon</p>
+                            </div>
+
+                            <div class="nbre-cuisine">
+                                <span><i class="fa-solid fa-kitchen-set"></i></span>
+                                <p>1 Cuisine</p>
+                            </div>
+
+                            <div class="nbre-chambre">
+                                <span><i class="fa-solid fa-bed"></i></span>
+                                <p>1 Chambre</p>
+                            </div>
 
 
 
-                        <div class="nbre-douche">
-                            <span><i class="fa-solid fa-shower"></i></span>
-                            <p>1 Douche</p>
-                        </div>
+                            <div class="nbre-douche">
+                                <span><i class="fa-solid fa-shower"></i></span>
+                                <p>1 Douche</p>
+                            </div>
+
+                        
+
+                            <div class="nbre-autre-piece">
+                                <span><i class="fa-regular fa-square"></i></span>
+                                <p>1 Autres pieces</p>
+                            </div>
 
                        
 
-                        <div class="nbre-autre-piece">
-                            <span><i class="fa-regular fa-square"></i></span>
-                            <p>1 Autres pieces</p>
                         </div>
+
+                    <?php 
+
+                        }
+
+                        // On verifie si le bien se trouve dans la table maison
+
+                        $reqCaractSpecifique = $connexionDataBase -> prepare('SELECT * FROM maison WHERE id_bienFK = :idBienFK');
+                        $reqCaractSpecifique -> execute(array(
+                            'idBienFK'=> $identifiantBien
+                        ));
+
+                    
+
+                        $resultatReqCaractMaison = $reqCaractSpecifique -> fetch();
+
+                        if(!empty($resultatReqCaractMaison)) {
+                       
+                        
+                    ?>  
+
+                        <!-- Au cas où on a trouvé un resultat, on affiche les caracterisques de la maison -->
+
+
+                        <div class="caracteristique">
+                            <div class="surface-terrain">
+                                <span><i class="fa-solid fa-chart-area"></i></span>
+                                <p>1000 m²</p>
+                            </div>
+
+                            <div class="nbre-etage">
+                                <span><i class="fa-solid fa-building"></i></span>
+                                <p>5 Niveaux</p>
+                            </div>
+
+                            <div class="nbre-parking">
+                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                <p>1 Parking</p>
+                            </div>
+
+                            <div class="nbre-salon">
+                                <span><i class="fa-solid fa-couch"></i></span>
+                                <p>1 Salon</p>
+                            </div>
+
+                            <div class="nbre-cuisine">
+                                <span><i class="fa-solid fa-kitchen-set"></i></span>
+                                <p>1 Cuisine</p>
+                            </div>
+
+                            <div class="nbre-chambre">
+                                <span><i class="fa-solid fa-bed"></i></span>
+                                <p>1 Chambre</p>
+                            </div>
+
+
+
+                            <div class="nbre-douche">
+                                <span><i class="fa-solid fa-shower"></i></span>
+                                <p>1 Douche</p>
+                            </div>
+
+                        
+
+                            <div class="nbre-autre-piece">
+                                <span><i class="fa-regular fa-square"></i></span>
+                                <p>1 Autres pieces</p>
+                            </div>
 
                        
 
-                    </div>
+                        </div>
+
+
+
+
+                    <?php 
+
+                        }
+
+
+                        // On verifie si le bien se trouve dans la table immeuble
+
+                        $reqCaractSpecifique = $connexionDataBase -> prepare('SELECT * FROM immeuble WHERE id_bienFK = :idBienFK');
+                        $reqCaractSpecifique -> execute(array(
+                            'idBienFK'=> $identifiantBien
+                        ));
+
+                    
+
+                        $resultatReqCaractImmeuble = $reqCaractSpecifique -> fetch();
+
+                        if(!empty($resultatReqCaractImmeuble)) {
+
+                    ?>
+
+
+                        <!-- Au cas où on a trouvé un resultat, on affiche les caracterisques de l' immeuble -->
+
+
+                        <div class="caracteristique">
+                            <div class="surface-terrain">
+                                <span><i class="fa-solid fa-chart-area"></i></span>
+                                <p>1000 m²</p>
+                            </div>
+
+                            <div class="nbre-etage">
+                                <span><i class="fa-solid fa-building"></i></span>
+                                <p>5 Niveaux</p>
+                            </div>
+
+                            <div class="nbre-parking">
+                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                <p>1 Parking</p>
+                            </div>
+
+                            <div class="nbre-salon">
+                                <span><i class="fa-solid fa-couch"></i></span>
+                                <p>1 Salon</p>
+                            </div>
+
+                            <div class="nbre-cuisine">
+                                <span><i class="fa-solid fa-kitchen-set"></i></span>
+                                <p>1 Cuisine</p>
+                            </div>
+
+                            <div class="nbre-chambre">
+                                <span><i class="fa-solid fa-bed"></i></span>
+                                <p>1 Chambre</p>
+                            </div>
+
+
+
+                            <div class="nbre-douche">
+                                <span><i class="fa-solid fa-shower"></i></span>
+                                <p>1 Douche</p>
+                            </div>
+
+                        
+
+                            <div class="nbre-autre-piece">
+                                <span><i class="fa-regular fa-square"></i></span>
+                                <p>1 Autres pieces</p>
+                            </div>
+
+                       
+
+                        </div>
+
+
+
+
+                    <?php 
+
+                        }
+
+                        // On verifie si le bien se trouve dans la table magasin
+
+                        $reqCaractSpecifique = $connexionDataBase -> prepare('SELECT * FROM magasin WHERE id_bienFK = :idBienFK');
+                        $reqCaractSpecifique -> execute(array(
+                            'idBienFK'=> $identifiantBien
+                        ));
+
+                    
+
+                        $resultatReqCaractMagasin = $reqCaractSpecifique -> fetch();
+                        if(!empty($resultatReqCaractMagasin)) {
+
+                    ?>
+
+                        <!-- Au cas où on a trouvé un resultat, on affiche les caracterisques du magasin -->
+
+
+                        <div class="caracteristique">
+                            <div class="surface-terrain">
+                                <span><i class="fa-solid fa-chart-area"></i></span>
+                                <p>1000 m²</p>
+                            </div>
+
+                            <div class="nbre-etage">
+                                <span><i class="fa-solid fa-building"></i></span>
+                                <p>5 Niveaux</p>
+                            </div>
+
+                            <div class="nbre-parking">
+                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                <p>1 Parking</p>
+                            </div>
+
+                            <div class="nbre-salon">
+                                <span><i class="fa-solid fa-couch"></i></span>
+                                <p>1 Salon</p>
+                            </div>
+
+                            <div class="nbre-cuisine">
+                                <span><i class="fa-solid fa-kitchen-set"></i></span>
+                                <p>1 Cuisine</p>
+                            </div>
+
+                            <div class="nbre-chambre">
+                                <span><i class="fa-solid fa-bed"></i></span>
+                                <p>1 Chambre</p>
+                            </div>
+
+
+
+                            <div class="nbre-douche">
+                                <span><i class="fa-solid fa-shower"></i></span>
+                                <p>1 Douche</p>
+                            </div>
+
+                        
+
+                            <div class="nbre-autre-piece">
+                                <span><i class="fa-regular fa-square"></i></span>
+                                <p>1 Autres pieces</p>
+                            </div>
+
+                       
+
+                        </div>
+
+
+
+                    <?php 
+
+                        }
+
+
+                        // On verifie si le bien se trouve dans la table terrain
+
+                        $reqCaractSpecifique = $connexionDataBase -> prepare('SELECT * FROM terrain WHERE id_bienFK = :idBienFK');
+                        $reqCaractSpecifique -> execute(array(
+                            'idBienFK'=> $identifiantBien
+                        ));
+
+                    
+
+                        $resultatReqCaractTerrain = $reqCaractSpecifique -> fetch();
+                        if(!empty($resultatReqCaractTerrain)) {
+
+                    ?>
+
+
+                        <!-- Au cas où on a trouvé un resultat, on affiche les caracterisques du terrain -->
+
+
+                        <div class="caracteristique">
+                            <div class="surface-terrain">
+                                <span><i class="fa-solid fa-chart-area"></i></span>
+                                <p>1000 m²</p>
+                            </div>
+
+                            <div class="nbre-etage">
+                                <span><i class="fa-solid fa-building"></i></span>
+                                <p>5 Niveaux</p>
+                            </div>
+
+                            <div class="nbre-parking">
+                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                <p>1 Parking</p>
+                            </div>
+
+                            <div class="nbre-salon">
+                                <span><i class="fa-solid fa-couch"></i></span>
+                                <p>1 Salon</p>
+                            </div>
+
+                            <div class="nbre-cuisine">
+                                <span><i class="fa-solid fa-kitchen-set"></i></span>
+                                <p>1 Cuisine</p>
+                            </div>
+
+                            <div class="nbre-chambre">
+                                <span><i class="fa-solid fa-bed"></i></span>
+                                <p>1 Chambre</p>
+                            </div>
+
+
+
+                            <div class="nbre-douche">
+                                <span><i class="fa-solid fa-shower"></i></span>
+                                <p>1 Douche</p>
+                            </div>
+
+                        
+
+                            <div class="nbre-autre-piece">
+                                <span><i class="fa-regular fa-square"></i></span>
+                                <p>1 Autres pieces</p>
+                            </div>
+
+                       
+
+                        </div>
+
+
+                        
+
+
+                    <?php 
+
+                        }
+                    ?>
+
+
+                        
+                    
+
+                    
 
                 </div>
                 <div class="pub-prix-localisation">
