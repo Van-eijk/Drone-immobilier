@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 23 fév. 2024 à 16:00
+-- Généré le : ven. 15 mars 2024 à 10:58
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -65,21 +65,21 @@ CREATE TABLE IF NOT EXISTS `bien` (
   `quartier_bien` varchar(150) NOT NULL,
   `telephone_proprietaire` varchar(25) NOT NULL,
   `date_time_bien` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `lien_photo1` varchar(255) DEFAULT NULL,
+  `lien_photo1` text NOT NULL,
   PRIMARY KEY (`id_Bien`),
   KEY `fk_bien` (`id_adminFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `bien`
 --
 
 INSERT INTO `bien` (`id_Bien`, `id_adminFK`, `reference_bien`, `titre_bien`, `description_bien`, `parking`, `location_vente`, `prix_bien`, `pays_bien`, `ville_bien`, `quartier_bien`, `telephone_proprietaire`, `date_time_bien`, `lien_photo1`) VALUES
-(30, 1, 'Chambre220224083910', 'chambre moderne à louer', 'chambre moderne à louer situé au centre ville de montreal\r\n                                ', 0, 'location', 30000, 'Canada', 'montreal', '', '', '2024-02-22 08:39:10', 'a:3:{i:0;s:49:\"ImagesSauv/chambre moderne à louer220224083910_1\";i:1;s:49:\"ImagesSauv/chambre moderne à louer220224083910_2\";i:2;s:49:\"ImagesSauv/chambre moderne à louer220224083910_3\";}'),
-(31, 1, 'Terrain220224084215', 'Terrain à vendre', '\r\n   terrain à vendre bon prix                             ', 0, 'vente', 1500000, 'Cameroun', 'Maroua', '', '', '2024-02-22 08:42:15', 'a:2:{i:0;s:42:\"ImagesSauv/Terrain à vendre220224084215_1\";i:1;s:42:\"ImagesSauv/Terrain à vendre220224084215_2\";}'),
-(32, 1, 'Villa220224013034', 'Villa de luxe à vendre', 'Grande villa luxueuse située en plein centre ville dans un quartier résidentiel\r\n                                ', 0, 'vente', 5000000, 'Cameroun', 'Yaounde', '', '', '2024-02-22 13:30:34', 'a:3:{i:0;s:48:\"ImagesSauv/Villa de luxe à vendre220224013034_1\";i:1;s:48:\"ImagesSauv/Villa de luxe à vendre220224013034_2\";i:2;s:48:\"ImagesSauv/Villa de luxe à vendre220224013034_3\";}'),
-(33, 1, 'Studio230224104132', '', '\r\n                                ', 0, 'location', 0, '', '', '', '', '2024-02-23 10:41:32', 'a:1:{i:0;s:25:\"ImagesSauv/230224104132_1\";}'),
-(34, 1, 'Chambre230224015043', 'Chambre simple à louer', 'Chambre simple à louer dans un quartier residentiel calme et sécurisé\r\n                                ', 1, 'location', 20000, 'Cameroun', 'Yaounde', 'Messassi', '653695347', '2024-02-23 13:50:43', 'a:3:{i:0;s:48:\"ImagesSauv/Chambre simple à louer230224015043_1\";i:1;s:48:\"ImagesSauv/Chambre simple à louer230224015043_2\";i:2;s:48:\"ImagesSauv/Chambre simple à louer230224015043_3\";}');
+(50, 1, 'Magasin150324091810', 'Bureaux à louer', 'kslmsdndscssiefkf,if,ef,ek,fkef,\r\n                                ', 1, 'location', 20000, 'Cameroun', 'Douala', 'Bonanjo', '653695347', '2024-03-15 09:18:10', '[\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_1\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_2\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_3\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_4\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_5\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_6\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_7\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_8\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_9\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_10\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_11\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_12\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_13\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_14\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_15\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_16\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_17\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_18\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_19\",\"ImagesSauv\\/Bureaux \\u00e0 louer150324091810_20\"]'),
+(51, 1, 'Villa150324100027', 'Villa de luxe à vendre', 'Villa de luxe située au centre de la ville de Yaounde dans un quartier residentiel\r\n                                ', 1, 'vente', 0, 'Cameroun', 'Yaounde', 'Bastos', '653695347', '2024-03-15 10:00:27', '[\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_1\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_2\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_3\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_4\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_5\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_6\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_7\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_8\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_9\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_10\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_11\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_12\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_13\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_14\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_15\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_16\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_17\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_18\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_19\",\"ImagesSauv\\/Villa de luxe \\u00e0 vendre150324100027_20\"]'),
+(52, 1, 'Chambre150324100251', 'Chambre simple à louer', '\r\n              Chambre moderne à louer situé en bordure de route                  ', 1, 'location', 25000, 'Cameroun', 'Yaounde', 'Messassi', '653695347', '2024-03-15 10:02:51', '[\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_1\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_2\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_3\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_4\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_5\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_6\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_7\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_8\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_9\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_10\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_11\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_12\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_13\",\"ImagesSauv\\/Chambre simple \\u00e0 louer150324100251_14\"]'),
+(53, 1, 'Immeuble150324101308', 'Immeuble à vendre', 'Immeuble à vendre avec un prix très doux\r\n                                ', 1, 'vente', 2000000, 'Cameroun', 'Yaounde', 'Messassi', '653695347', '2024-03-15 10:13:08', '[\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_1\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_2\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_3\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_4\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_5\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_6\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_7\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_8\",\"ImagesSauv\\/Immeuble \\u00e0 vendre150324101308_9\"]'),
+(54, 1, 'Terrain150324103655', 'Terrain à vendre bon prix', '\r\n       Terrain plat à vendre                         ', 0, 'vente', 500000, 'Cameroun', 'Douala', 'Yassa', '653695347', '2024-03-15 10:36:55', '[\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_1\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_2\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_3\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_4\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_5\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_6\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_7\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_8\",\"ImagesSauv\\/Terrain \\u00e0 vendre bon prix150324103655_9\"]');
 
 -- --------------------------------------------------------
 
@@ -93,17 +93,17 @@ CREATE TABLE IF NOT EXISTS `chambre` (
   `id_bienFK` int NOT NULL,
   `superficie_chambre` float DEFAULT NULL,
   `moderne_chambre` enum('OUI','NON') DEFAULT 'OUI',
+  `cuisine_chambre` enum('OUI','NON') DEFAULT 'NON',
   PRIMARY KEY (`id_chambre`),
   KEY `fk_chambre` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `chambre`
 --
 
-INSERT INTO `chambre` (`id_chambre`, `id_bienFK`, `superficie_chambre`, `moderne_chambre`) VALUES
-(1, 30, 100, 'OUI'),
-(2, 34, 100, 'NON');
+INSERT INTO `chambre` (`id_chambre`, `id_bienFK`, `superficie_chambre`, `moderne_chambre`, `cuisine_chambre`) VALUES
+(3, 52, 100, 'OUI', 'OUI');
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,14 @@ CREATE TABLE IF NOT EXISTS `immeuble` (
   `nbre_etage` int NOT NULL,
   PRIMARY KEY (`id_immeuble`),
   KEY `fk_immeuble` (`id_bienFK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+
+--
+-- Déchargement des données de la table `immeuble`
+--
+
+INSERT INTO `immeuble` (`id_immeuble`, `id_bienFK`, `superficie_terrain_immeuble`, `nbre_etage`) VALUES
+(1, 53, 3000, 5);
 
 -- --------------------------------------------------------
 
@@ -152,7 +159,14 @@ CREATE TABLE IF NOT EXISTS `magasin` (
   `nombre_piece_magasin` int NOT NULL,
   PRIMARY KEY (`id_magasin`),
   KEY `fk_magasin` (`id_bienFK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+
+--
+-- Déchargement des données de la table `magasin`
+--
+
+INSERT INTO `magasin` (`id_magasin`, `id_bienFK`, `superficie_magasin`, `nombre_piece_magasin`) VALUES
+(7, 50, 50, 2);
 
 -- --------------------------------------------------------
 
@@ -173,15 +187,14 @@ CREATE TABLE IF NOT EXISTS `maison` (
   `superficie_terrain` float DEFAULT '0',
   PRIMARY KEY (`id_maison`),
   KEY `fk_maison` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `maison`
 --
 
 INSERT INTO `maison` (`id_maison`, `id_bienFK`, `nbre_piece`, `nbre_chambre`, `nbre_cuisine`, `nbre_salon`, `nbre_douche`, `type_maison`, `superficie_terrain`) VALUES
-(1, 32, 5, 10, 3, 3, 11, 'villa', 3000),
-(2, 33, 0, 0, 0, 0, 0, 'studio', 0);
+(10, 51, 2, 6, 3, 3, 7, 'villa', 2000);
 
 -- --------------------------------------------------------
 
@@ -257,14 +270,14 @@ CREATE TABLE IF NOT EXISTS `terrain` (
   `superficie_terrain` float NOT NULL,
   PRIMARY KEY (`id_terrain`),
   KEY `fk_terrain` (`id_bienFK`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `terrain`
 --
 
 INSERT INTO `terrain` (`id_terrain`, `id_bienFK`, `superficie_terrain`) VALUES
-(1, 31, 2000);
+(4, 54, 2500);
 
 -- --------------------------------------------------------
 

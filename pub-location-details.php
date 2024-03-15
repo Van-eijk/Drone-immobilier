@@ -99,7 +99,7 @@
                 <div class="main-picture-pub">
                     <?php
                         $tabPhotoPub = $resultatReqDetailsBien['lien_photo1'];
-                        $tabPhotoPub = unserialize($tabPhotoPub);
+                        $tabPhotoPub = json_decode($tabPhotoPub);
 
                         for($i= 0;$i<count($tabPhotoPub);$i++) {
                     ?>
@@ -406,7 +406,7 @@
                             </div>
 
                             <div class="nbre-parking">
-                                <span><i class="fa-solid fa-square-parking"></i></span>
+                                
 
                                 <?php
                                     if($resultatReqDetailsBien['parking'] > 0){ ?>
@@ -456,13 +456,12 @@
                         <div class="caracteristique">
                             <div class="surface-terrain">
                                 <span><i class="fa-solid fa-chart-area"></i></span>
-                                <p><?php echo $resultatReqDetailsBien['superficie_magasin']. " " . "m²"; ?> </p>
+                                <p><?php echo $resultatReqCaractMagasin['superficie_magasin']. " " . "m²"; ?> </p>
                             </div>
 
                             
 
                             <div class="nbre-parking">
-                                <span><i class="fa-solid fa-square-parking"></i></span>
 
                                 <?php
                                     if($resultatReqDetailsBien['parking'] > 0){ ?>
@@ -486,14 +485,14 @@
                                 <span><i class="fa-regular fa-square"></i></span>
 
                                 <?php
-                                    if($resultatReqDetailsBien["nombre_piece_magasin"] > 1){
+                                    if($resultatReqCaractMagasin["nombre_piece_magasin"] > 1){
                                 ?>
-                                    <p><?php echo $resultatReqDetailsBien['nombre_piece_magasin']. " " . "Pieces"; ?> </p>
+                                    <p><?php echo $resultatReqCaractMagasin['nombre_piece_magasin']. " " . "Pieces"; ?> </p>
                                 <?php
                                     }
                                     else{
                                         ?>
-                                        <p><?php echo $resultatReqDetailsBien['nombre_piece_magasin']. " " . "Piece"; ?> </p>
+                                        <p><?php echo $resultatReqCaractMagasin['nombre_piece_magasin']. " " . "Piece"; ?> </p>
 
                                     <?php
                                     }

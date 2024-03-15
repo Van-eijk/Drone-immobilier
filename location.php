@@ -89,8 +89,9 @@
                 ?>">
                     <!-- photo de couverture -->
                     <?php 
-                        $tabPhotoPub = $donneesBienLocation['lien_photo1'] ;
-                        $tabPhotoPub = unserialize($tabPhotoPub) ;
+                        $tabPhotoPu = $donneesBienLocation['lien_photo1'] ;
+                        //echo strlen($tabPhotoPu);
+                        $tabPhotoPub = json_decode($tabPhotoPu) ;
                         //echo $tabPhotoPub[0];
 
                     ?>

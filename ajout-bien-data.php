@@ -78,7 +78,7 @@
             
                                                         if(gettype($uploadImagePub) == "array"){
             
-                                                            $serialImage = serialize($uploadImagePub);
+                                                            $serialImage = json_encode($uploadImagePub);
             
             
                                                             
